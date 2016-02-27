@@ -3,8 +3,6 @@ title: getting better
 summary: what makes you a good programmer
 ---
 
-In my [about section](/about.html), I wrote about getting better every day.
-This sounds very reasonable.
 When you think about programming, you will have writing code in mind.
 Although pressing you ideas into executable code is one of the finest discipline for a software engineer, but it doesn't tell the whole story. 
 
