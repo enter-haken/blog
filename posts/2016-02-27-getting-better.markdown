@@ -23,7 +23,7 @@ A lot of people can write code, that simply compile.
 Good programmers write code a human can understand.
 Imagine you have to fix a bug in a part of an application you have written half a year or so.
 Would it be nice you can dive into your own code as quick as possible?
-Imagine how nice it would be, when the person who have to dive isn't you, has the same option?
+Imagine how nice it would be, when the person who have to dive isn't you, has the same chance?
 
 # break it down
 
