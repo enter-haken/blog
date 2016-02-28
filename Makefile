@@ -13,6 +13,13 @@ clean:
 serve:
 	./site watch
 
+publish:
+	cd ../enter-haken.github.io/ && \
+	git reset --hard && \
+	cp -r ../blog/_site/* . && \
+	git commit -va && \
+	git push
+
 run: rebuild serve
 
 
