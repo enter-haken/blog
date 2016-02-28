@@ -18,9 +18,5 @@ I have been working on / with
 This is my personal blog, where I write about programming, infrastructure and own ideas. 
 I start with some simple pages and let ths blog grow as needed.
 
-You can contact me via
-
-* [mail](mailto:jan_hake@gmx.de)
-* [xing](https://www.xing.com/profile/JanFrederik_Hake)
-* [twitter](https:/www.twitter.com/enter_haken)
+You can contact me via <jan_hake@gmx.de>, [xing](https://www.xing.com/profile/JanFrederik_Hake), or [twitter](https:/www.twitter.com/enter_haken)
 
