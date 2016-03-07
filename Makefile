@@ -9,6 +9,9 @@ rebuild:
 
 clean:
 	./site clean
+	rm site.hi
+	rm site.o
+	rm site
 
 serve:
 	./site watch
