@@ -128,4 +128,10 @@ $ cat committers.log | sort | uniq -c | sort -rn | awk '$1 > 10 { print }'
     11 Marc Laval
 ```
 
-The output gives you a hint, what is currently happening in the repository. It says nothing about the quality of the work of the committer. [Rewriting commits](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) is often use to have a slim commit history. Others leave the commits as they are. For older repository it may be more interesting, what has happened e.g. in the last two years. With a few adjustments this can be achieved. See [git log --since](https://git-scm.com/docs/git-log) for more information. 
+The output gives you a hint, what is currently happening in the repository. 
+It says nothing about the quality of the work of the committer. 
+[Rewriting commits](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) is often use to have a slim commit history. 
+Others leave the commits as they are. 
+For an older repository it may be more interesting, what has happened e.g. in the last two years. 
+With a few adjustments this can be achieved. 
+See [git log --since](https://git-scm.com/docs/git-log) for more information. 
