@@ -6,7 +6,7 @@ title: Read
 
 ## [User Story Mapping](http://www.amazon.com/User-Story-Mapping-Discover-Product/dp/1491904909)
 
-When you are working within a team a shared understanding is essential. 
+When you are working within a team, a shared understanding is essential. 
 It's about coding less, and growing software peace by peace. 
 From the Foreword by Marty Cagan: "This book gets to the heart about how teams collaborate, communicate and ultimately come up with good stuff to build.". 
 
