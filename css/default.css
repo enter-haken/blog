@@ -49,14 +49,21 @@ ul#postList li > p {
 }
 
 h1 {
+    font-weight: bold;
     color: black;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 h2 {
     color: black;
-    font-size: 16px;
+    font-size: 18px;
 }
+
+h3 {
+    color: black;
+    font-size: 14px;
+}
+
 
 div.info {
     color: #777;
