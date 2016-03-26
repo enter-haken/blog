@@ -37,8 +37,15 @@ some vim stuff
 * `h` - left 
 * `l` - right
 
+* `0` - beginning of a line
+* `$` - end of a line
+* 'w' - beginning of a world
+* ')' - forward one sentence
+* '(' - backward one sentence
+
+
 ## visual
 
-* `iv'` - select inner text bettween two `'` 
+* `iv'` - select inner text between two `'` 
 * `<C-V>` - select column
     * `I` - insert text -> `<ESC>` -> insert text in front of the selection
