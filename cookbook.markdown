@@ -32,17 +32,20 @@ some vim stuff
 
 ## movement
 
+basic movement
+
 * `k` - up
 * `j` - down
 * `h` - left 
 * `l` - right
+
+jumps
 
 * `0` - beginning of a line
 * `$` - end of a line
 * 'w' - beginning of a world
 * ')' - forward one sentence
 * '(' - backward one sentence
-
 
 ## visual
 
