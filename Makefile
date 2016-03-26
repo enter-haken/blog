@@ -20,7 +20,8 @@ publish:
 	cd ../enter-haken.github.io/ && \
 	git reset --hard && \
 	cp -r ../blog/_site/* . && \
-	git commit -va && \
+	git add * && \
+	git commit -v && \
 	git push
 
 run: rebuild serve
