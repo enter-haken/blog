@@ -10,6 +10,10 @@ When you are working within a team, a shared understanding is essential.
 It's about coding less, and growing software peace by peace. 
 From the Foreword by Marty Cagan: "This book gets to the heart about how teams collaborate, communicate and ultimately come up with good stuff to build.". 
 
+## [UX for lean startups](http://www.amazon.com/UX-Lean-Startups-Experience-Research/dp/1449334911)
+
+Solve problems, which really are existing.
+
 ## [Coders at Work](http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483)
 
 About the craftsmanship of a coder.
