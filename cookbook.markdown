@@ -49,6 +49,6 @@ jumps
 
 ## visual
 
-* `iv'` - select inner text between two `'` 
+* `vi'` - select inner text between two `'` 
 * `<C-V>` - select column
     * `I` - insert text -> `<ESC>` -> insert text in front of the selection
