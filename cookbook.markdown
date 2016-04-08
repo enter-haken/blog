@@ -18,6 +18,15 @@ will show
 
 ![](/images/dot_test.png)
 
+# snippet
+
+remove empty lines from output
+
+```
+sed '/^\s*$/d'
+```
+
+
 # git
 pull all repositories located in sub directories, assuming there are only subdirectories in the current directory
 
