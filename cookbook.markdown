@@ -10,7 +10,7 @@ This is my loose collection of snippets, I use from day to day.
 Assuming a image viewer like [feh](https://feh.finalrewind.org) is installed
 
 ```
-echo 'digraph test { a -> b; b -> c; a -> c; }' | dot -Tpng | feh -
+echo 'digraph { a -> b; b -> c; a -> c; }' | dot -Tpng | feh -
 
 ```
 
