@@ -22,6 +22,21 @@ About the craftsmanship of a coder.
 
 How founders get their successfully business.
 
+# Books by Pieter Hintjens
+
+## [Social Architecture](https://www.amazon.de/Social-Architecture-Building-line-Communities/dp/1533112452/)
+
+About building On-line Communities.
+
+## [Confessions of a Necromancer: And other stories](https://www.amazon.de/Confessions-Necromancer-stories-Pieter-Hintjens/dp/1539178846)
+
+Stories from a man, who has written code for thirty-five years.
+
+## [Culture and Empire: Digital Revolution](https://www.amazon.de/Culture-Empire-Revolution-Pieter-Hintjens/dp/1492999776)
+
+About wealth, time and freedom.
+
+
 # Books about Erlang
 
 ## [Programming Erlang](http://www.amazon.com/Programming-Erlang-Concurrent-Pragmatic-Programmers/dp/193778553X)
