@@ -4,7 +4,8 @@ help:
 	@echo "make rebuild - rebuild the site itself"
 	@echo "make clean - delete all generated content and the build resource"
 	@echo "make serve - run the site in debug mode"
-	@echo "make publish - bublish site on enter-haken.github.io"
+	@echo "make publish - publish site on enter-haken.github.io"
+	@echo "make run - clean site build serve"
 
 site:
 	ghc --make site.hs
@@ -32,6 +33,6 @@ publish:
 	git commit -v && \
 	git push
 
-run: rebuild serve
+run: clean site build serve 
 
 
