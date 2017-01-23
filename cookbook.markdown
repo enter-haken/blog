@@ -71,4 +71,4 @@ jumps
 * `:%s/foo/bar/g` - replace all `foo` with `bar`
 
 ## settings
-* `:set ignorecase` - case insesitive search
+* `:set ignorecase` - case insensitive search
