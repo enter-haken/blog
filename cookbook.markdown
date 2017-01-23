@@ -69,3 +69,6 @@ jumps
    
 ## substitute
 * `:%s/foo/bar/g` - replace all `foo` with `bar`
+
+## setings
+* `:set ignorecase` - case insesitive search
