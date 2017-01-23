@@ -61,3 +61,15 @@ jumps
 * `vi'` - select inner text between two `'` 
 * `<C-V>` - select column
     * `I` - insert text -> `<ESC>` -> insert text in front of the selection
+
+## repeats
+* `g` - global
+   * `:g/Test/d` - delete all lines containing `Test`
+   * `:g!/Test/d` - delete all lines not containing `Test`
+   
+## substitute
+* `:%s/foo/bar/g` - replace all `foo` with `bar`
+
+## settings
+* `:set ignorecase` - case insensitive search
+* `:set wrap` / `:set nowrap` - enables / disables automatic line breaks
