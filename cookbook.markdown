@@ -72,3 +72,4 @@ jumps
 
 ## settings
 * `:set ignorecase` - case insensitive search
+* `:set wrap` / `:set nowrap` - enables / disables automatic line breaks
