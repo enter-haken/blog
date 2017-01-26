@@ -34,6 +34,17 @@ pull all repositories located in sub directories, assuming there are only subdir
 #!/bin/bash
 ls | xargs -I{} git -C {} pull
 ```
+## reset a single file
+
+```
+git checkout HEAD -- fileName.xxx
+```
+
+## show graph
+
+```
+git log --graph --oneline --all
+```
 
 # vim
 
