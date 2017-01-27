@@ -46,8 +46,8 @@ git log --graph --oneline --all
 ```
 # firefox addons
 
-[VimFx](https://addons.mozilla.org/de/firefox/addon/vimfx/) - using vim commands for browsing
-[MarkdownViewer](https://addons.mozilla.org/de/firefox/addon/markdown-viewer/) - render markdown files
+* [VimFx](https://addons.mozilla.org/de/firefox/addon/vimfx/) - using vim commands for browsing
+* [MarkdownViewer](https://addons.mozilla.org/de/firefox/addon/markdown-viewer/) - render markdown files
 
 # vim
 
