@@ -26,7 +26,6 @@ remove empty lines from output
 sed '/^\s*$/d'
 ```
 
-
 # git
 pull all repositories located in sub directories, assuming there are only subdirectories in the current directory
 
@@ -45,6 +44,10 @@ git checkout HEAD -- fileName.xxx
 ```
 git log --graph --oneline --all
 ```
+# firefox addons
+
+* [VimFx](https://addons.mozilla.org/de/firefox/addon/vimfx/) - using vim commands for browsing
+* [MarkdownViewer](https://addons.mozilla.org/de/firefox/addon/markdown-viewer/) - render markdown files
 
 # vim
 
