@@ -49,6 +49,26 @@ git log --graph --oneline --all
 * [VimFx](https://addons.mozilla.org/de/firefox/addon/vimfx/) - using vim commands for browsing
 * [MarkdownViewer](https://addons.mozilla.org/de/firefox/addon/markdown-viewer/) - render markdown files
 
+# tmux
+
+basic
+
+* `tmux a` - atach
+* `<ctrl> b d` - detatch
+* `<shift>` - select text with left mouse bottom [link](https://awhan.wordpress.com/2012/04/18/tmux-copy-paste-with-mouse/)
+* `<shift>` - paste text with right mouse bottom
+
+Window
+
+* `<ctrl> b c` - create new window
+* `<ctrl> b n` - next window
+
+Pane
+
+* `<ctrl> b x` - kill pane
+* `<ctrl> b "` - create horizontal pane
+* `<ctrl> b %` - create vertical pane
+
 # vim
 
 some vim stuff
