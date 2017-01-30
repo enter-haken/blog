@@ -51,6 +51,8 @@ git log --graph --oneline --all
 
 # tmux
 
+[tmux shortcuts & cheatsheet](https://gist.github.com/MohamedAlaa/2961058)
+
 basic
 
 * `tmux a` - atach
