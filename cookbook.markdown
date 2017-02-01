@@ -88,9 +88,9 @@ jumps
 
 * `0` - beginning of a line
 * `$` - end of a line
-* 'w' - beginning of a world
-* ')' - forward one sentence
-* '(' - backward one sentence
+* `w` - beginning of a world
+* `)` - forward one sentence
+* `(` - backward one sentence
 
 ## visual
 
