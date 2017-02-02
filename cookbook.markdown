@@ -2,7 +2,7 @@
 title: Cookbook
 ---
 
-This is my loose collection of snippets, I use from day to day.
+This is my loose collection of snippets, applications and commands, I use from day to day.
 
 # dot
 
