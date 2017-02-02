@@ -12,7 +12,7 @@ I have been working on / with
 * clustered relational databases with hundreds of tables and thousands of stored procedures
 * code bases with more than a quarter million lines of code
 * [brownfield](http://en.wikipedia.org/wiki/Brownfield_(software_development)) projects / products
-* document based database systems with millions of documents with terabytes in size
+* document based database systems with millions of documents and terabytes in size
 * [extjs](http://www.sencha.com/products/extjs/) based web applications
 
 This is my personal blog, where I write about programming, infrastructure and own ideas. 

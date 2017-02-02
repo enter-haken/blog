@@ -2,7 +2,7 @@
 title: Cookbook
 ---
 
-This is my loose collection of snippets, I use from day to day.
+This is my loose collection of snippets, applications and commands, I use from day to day.
 
 # dot
 
@@ -70,6 +70,10 @@ Pane
 * `<ctrl> b x` - kill pane
 * `<ctrl> b "` - create horizontal pane
 * `<ctrl> b %` - create vertical pane
+
+# batch
+
+* `for /F %L in (commandParameters.txt) do echo %L` - Execute command for every line in given textfile (in this case the `echo` command) / [for command](https://technet.microsoft.com/en-us/library/bb490909.aspx)
 
 # vim
 
