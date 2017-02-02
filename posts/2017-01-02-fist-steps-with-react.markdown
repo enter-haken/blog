@@ -249,7 +249,6 @@ render() {
   return <div className="App">
             { posts }
          </div>
-  
 }
 ```
 
