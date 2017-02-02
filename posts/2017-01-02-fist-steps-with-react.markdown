@@ -172,7 +172,6 @@ import {
 } from 'material-ui/Card';
 
 class BlogPost extends Component {
-
     render() {
       return <Card expanded={true} style={{ marginBottom : '10px' }}>
                 <CardHeader
