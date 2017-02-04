@@ -3,7 +3,9 @@ title: Repository ownership
 summary: getting a guess about the ownership of a repository.
 ---
 
-Weeks ago we had a discussion about code ownership. Over years ownership may skip over to other developers e.g. due to job change. For a approximation you can start with the files, checked in to repository. I will use the [Angular.js](https://github.com/angular/angular.git) repository for demonstrations.
+Weeks ago my colleagues and I had a discussion about code ownership. Over years ownership may skip over to other developers e.g. due to job change. For a approximation you can start with the files, checked in to repository. I will use the [Angular.js](https://github.com/angular/angular.git) repository for demonstrations.
+
+<!--more-->
 
 First make a local clone.
 

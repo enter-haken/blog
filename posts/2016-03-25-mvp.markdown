@@ -4,7 +4,10 @@ summary: what is your skateboard
 ---
 
 According to [User Story Mapping, 44ff ][2] there are several ways to grow a product. 
-You can take the requirements as given and build, product peace by peace and finally deliver it all, or try to build working products with each iteration.
+You can take the requirements as given and build a product peace by peace.
+Finally you deliver it all, or try to build working products with each iteration.
+
+<!--more-->
 
 Henrik Kniberg revisit this topic in a resent [blog post][1] in a more detailed way.
 

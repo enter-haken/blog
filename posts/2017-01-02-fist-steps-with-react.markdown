@@ -11,6 +11,8 @@ First of all, [npm][2] is needed for the build tool chain.
 Via `npm install create-react-app -g` you've got a good point to start.
 It installs the [tool chain][3], needed for creating a development environment.
 
+<!--more-->
+
 Let us take a simple Blog engine as an example.
 You can setup a new react project with `create-react-app Blog`. 
 This command creates a new folder named `Blog` and installs a bunch of tools in the project directory.

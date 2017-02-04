@@ -5,6 +5,8 @@ summary: finding own branches merged with the master
 
 After working over months with several developers on one repository, a little bit "tree care" is necessary. Usually old merged branches are deleted on server, when they are not needed any more. 
 
+<!--more-->
+
 ~~~ 
 for branch in `git branch -r --merged master`;
 do

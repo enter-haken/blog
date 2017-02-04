@@ -8,6 +8,8 @@ Although pressing you ideas into executable code is one of the finest discipline
 
 There are some techniques and abilities, a good software developer should have from my point of view.
 
+<!--more-->
+
 # brain debug
 
 A college of mine called it "brain debug".
