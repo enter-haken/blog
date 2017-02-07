@@ -113,3 +113,19 @@ jumps
 ## settings
 * `:set ignorecase` - case insensitive search
 * `:set wrap` / `:set nowrap` - enables / disables automatic line breaks
+
+# haskell
+
+[How I start by Chris Allen](http://howistart.org/posts/haskell/1)
+
+Preconditions
+
+* ghci / cabal / stack installed
+* `stack new projectName simple` - start a new simple haskell project
+
+after changed into project folder
+
+* `stack setup` - init project
+* `stack build` - build the project
+* `stack exec projectName` - start programm
+* `stack ghci` - load project aware ghci
