@@ -39,11 +39,30 @@ ls | xargs -I{} git -C {} pull
 git checkout HEAD -- fileName.xxx
 ```
 
-## show graph
+## aliases
+
+common aliases
 
 ```
-git log --graph --oneline --all
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
 ```
+
+### reset a single file to head
+
+```
+git config --global alias.unstage "reset HEAD --"
+git unstage file.txt
+```
+
+### show graph
+
+```
+git config --global alias.l "log --graph --oneline --all"
+```
+
 # firefox addons
 
 * [VimFx](https://addons.mozilla.org/de/firefox/addon/vimfx/) - using vim commands for browsing

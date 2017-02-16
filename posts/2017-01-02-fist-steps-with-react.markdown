@@ -205,7 +205,7 @@ For our small example, we extend our `App.js` to a statefull component.
 The data will be loaded after application start.
 
 A good place for this is the [componentDidMount][11] function. 
-Changes on state will cause a re render of the affected dom elements.
+Changes on state will cause a rerender of the affected dom elements.
 We will override this method with.
 
 
