@@ -114,6 +114,11 @@ jumps
 * `:set ignorecase` - case insensitive search
 * `:set wrap` / `:set nowrap` - enables / disables automatic line breaks
 
+## misc
+
+* `u` - undo
+* `<ctrl> r` - redo
+
 # haskell
 
 [How I start by Chris Allen](http://howistart.org/posts/haskell/1)
