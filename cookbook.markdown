@@ -63,8 +63,6 @@ git unstage file.txt
 git config --global alias.l "log --graph --oneline --all"
 ```
 
-### res
-
 # firefox addons
 
 * [VimFx](https://addons.mozilla.org/de/firefox/addon/vimfx/) - using vim commands for browsing
