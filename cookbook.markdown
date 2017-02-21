@@ -26,6 +26,12 @@ remove empty lines from output
 sed '/^\s*$/d'
 ```
 
+count lines of code (simple)
+
+```
+find . -name '*.extension' | xargs wc -l
+```
+
 # git
 pull all repositories located in sub directories, assuming there are only subdirectories in the current directory
 
