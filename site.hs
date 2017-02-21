@@ -39,7 +39,7 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
-
+    
     match "index.html" $ do
          route idRoute
          compile $ do
