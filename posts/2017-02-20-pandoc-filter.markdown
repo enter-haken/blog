@@ -72,7 +72,7 @@ This looks promising.
 I choose `svg`, because it can be easily integrated into a html document.
 
 At first a create a simple environment for testing. 
-I use a `index.html` as simple template
+I use a `index.html` as a simple template,
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -127,7 +127,7 @@ This function will create a single `index.html` in the output folder.
 The interesting part here is the `pandocCompiler`. 
 There is a [derived compiler][5] `pandocCompilerWithTransform` which allows you to specify a transformation for the given content.
 Given the type signature `pandocCompilerWithTransform :: ReaderOptions -> WriterOptions -> (Pandoc -> Pandoc) -> Compiler (Item String)`, I have an entry point for the filter.
-I need something that takes a `Pandoc` and gives back a `Pandoc`.
+I need something that takes a `Pandoc` and returns a `Pandoc`.
 
 ```
 graphViz :: Pandoc -> Pandoc
@@ -152,7 +152,7 @@ svg contents = unsafePerformIO $ readProcess "dot" ["-Tsvg"] contents
 [unsafePerformIO][7] is a kind of 'backdoor'. 
 It should be used only with care. 
 
-With the new walker
+With the new walker,
 
 ```
 codeBlock :: Block -> Block
@@ -215,9 +215,9 @@ svg :: String -> String
 svg contents = unsafePerformIO $ readProcess "dot" ["-Tsvg"] contents
 ```
 
-This code transforms a markdown document into html and converts all codeblocks with a `lang` tag into a svg version of the given graph.
+This code transforms a markdown document into html and converts all codeblocks with a `lang` tag into a svg version of the given graph. At this point, I don't use the value of `lang`. It is possible to implement a different behaviour for other tags or different values.
 
-[result](/example/pandoc/dotlang/index.html)
+See the [result](/example/pandoc/dotlang/index.html).
                     
 [1]: https://jaspervdj.be/hakyll/
 [2]: http://pandoc.org/
