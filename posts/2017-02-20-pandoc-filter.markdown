@@ -178,13 +178,12 @@ Putting it all together
 
 ```
 {-# LANGUAGE OverloadedStrings #-}
-import Data.Monoid (mappend)
 import Hakyll
 import Text.Pandoc
-import System.Process
-import System.IO.Unsafe
-
 import Text.Pandoc.Walk ( walk )
+
+import System.Process ( readProcess )
+import System.IO.Unsafe ( unsafePerformIO )
 
 main :: IO ()
 main = hakyll $ do
