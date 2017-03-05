@@ -159,3 +159,7 @@ after changed into project folder
 * `stack build` - build the project
 * `stack exec projectName` - start programm
 * `stack ghci` - load project aware ghci
+
+## ghci
+
+* `:set -XOverloadedStrings` - activate overloaded string extension

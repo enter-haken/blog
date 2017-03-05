@@ -1,14 +1,12 @@
 <ul id="list">
-    $for(posts)$
+    $for(notes)$
         <li>
-            <a href="$url$">$title$</a> - $date$
+            <a href="$url$">$title$</a>
             $if(teaser)$
             <p>
                 $teaser$
             </p>
             <a href="$url$">more</a>
-            $else$
-            <p>$summary$</p>
             $endif$
         </li>
     $endfor$

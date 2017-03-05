@@ -1,6 +1,13 @@
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
-import           Hakyll
+import Data.Monoid (mappend)
+import Text.Pandoc
+import Text.Pandoc.Walk ( walk )
+
+import System.Process ( readProcess )
+import System.IO.Unsafe ( unsafePerformIO )
+
+
+import Hakyll
 
 myFeedConfiguration :: FeedConfiguration
 myFeedConfiguration = FeedConfiguration
@@ -14,11 +21,7 @@ myFeedConfiguration = FeedConfiguration
 
 main :: IO ()
 main = hakyll $ do
-    match "images/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "example/**" $ do
+    match ("images/*" .||. "example/**") $ do
         route   idRoute
         compile copyFileCompiler
 
@@ -34,10 +37,18 @@ main = hakyll $ do
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ pandocPostCompiler
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls
+ 
+    match "notes/*" $ do
+        route $ setExtension "html"
+        compile $ pandocPostCompiler
+            >>= saveSnapshot "content"
+            >>= loadAndApplyTemplate "templates/note.html"    defaultContext 
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
     
     match "index.html" $ do
@@ -53,6 +64,21 @@ main = hakyll $ do
                  >>= applyAsTemplate indexCtx
                  >>= loadAndApplyTemplate "templates/default.html" indexCtx
                  >>= relativizeUrls
+
+    match "notes.html" $ do
+         route idRoute
+         compile $ do
+             notes <- loadAll "notes/*"
+             let noteCtx =
+                     listField "notes" teaserCtx (return notes) `mappend`
+                     constField "title" "notes"            `mappend`
+                     defaultContext
+
+             getResourceBody
+                 >>= applyAsTemplate noteCtx
+                 >>= loadAndApplyTemplate "templates/default.html" noteCtx
+                 >>= relativizeUrls
+
 
     match "templates/*" $ compile templateCompiler
 
@@ -72,3 +98,22 @@ postCtx =
 
 teaserCtx :: Context String
 teaserCtx = teaserField "teaser" "content" `mappend` postCtx
+
+pandocPostCompiler :: Compiler (Item String)
+pandocPostCompiler = pandocCompilerWithTransform
+    defaultHakyllReaderOptions
+    defaultHakyllWriterOptions
+    graphViz
+
+graphViz :: Pandoc -> Pandoc
+graphViz = walk codeBlock
+
+codeBlock :: Block -> Block
+codeBlock cb@(CodeBlock (id, classes, namevals) contents) = 
+    case lookup "lang" namevals of
+        Just f -> RawBlock (Format "html") $ svg contents
+        nothing -> cb
+codeBlock x = x
+
+svg :: String -> String
+svg contents = unsafePerformIO $ readProcess "dot" ["-Tsvg"] contents
