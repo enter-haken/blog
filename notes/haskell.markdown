@@ -9,7 +9,7 @@ The type system is one of the best in class.
 A frequent statement says: "If it compiles, it runs". 
 
 My current development stack uses the CLI [ghci][ghci] and vim as an editor.
-I use [Hoogle][hoogle] to search for types or type definitions, and use [Hackage][hackage] to dive into the libraries frequently used.
+I use [Hoogle][hoogle] to search for types or type definitions, and use [Hacked][hackage] to dive into the libraries frequently used.
 
 <!--more-->
 
@@ -37,6 +37,50 @@ Looking at the `putStr` method, you can see, that it takes a `String` as a first
 When you work with Haskell, your coding workflow will be slightly different.
 Instead of debugging, you will often use the [ghci][ghci] to test your functions.
 
+# Types
+
+With the `data` keyword you define new types in Haskell.
+In [prelude][preludeBool] the `Bool` definition looks like.
+
+```
+data Bool = True | False
+```
+
+`True` and `False` are value constructors. 
+They can have zero or more parameters.
+
+```
+data Person = SimplePerson String String
+```
+
+In this example a `Person` can be created using the value constructor `SimplePerson`.
+The first parameter will be the first name, the second the last name.
+
+```
+ghci>:t SimplePerson 
+SimplePerson :: String -> String -> Person
+```
+
+Creating a new `Person` in ghci will cause an error, if you don't bind it to a variable.
+
+```
+ghci>data Person = SimplePerson String String
+ghci>SimplePerson "Jan" "Hake"
+
+<interactive>:6:1:
+    No instance for (Show Person) arising from a use of ‘print’
+    In a stmt of an interactive GHCi command: print it
+```
+
+If you want to see, how a `Person` looks like, it must be able to show it self. 
+Therefore a first [type class][typeClass] has to be introduced to the new `Person`.
+
+```
+ghci>data Person = SimplePerson String String deriving Show
+ghci>SimplePerson "Jan" "Hake"
+SimplePerson "Jan" "Hake"
+```
+
 # Real world projects
 
 There are several Haskell projects, which are really remarkable. 
@@ -63,3 +107,5 @@ There are several readers and writers available.
 [hakyllExamples]: https://jaspervdj.be/hakyll/examples.html
 [pandoc]: http://pandoc.org/
 [pandocFilters]: http://pandoc.org/scripting.html
+[preludeBool]: https://hackage.haskell.org/package/base-4.9.1.0/docs/Prelude.html#t:Bool
+[typeClass]: https://www.haskell.org/tutorial/stdclasses.html
