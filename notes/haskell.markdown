@@ -81,6 +81,39 @@ ghci>SimplePerson "Jan" "Hake"
 SimplePerson "Jan" "Hake"
 ```
 
+In Haskell, every function is a [curried][currying] function. 
+This means, every function in Haskell has exactly one parameter.
+
+You can build a list of `Person`s with the following expression.
+
+```
+ghci>map ($ "Hake") [SimplePerson "Jan", SimplePerson "Brother dear"]
+[SimplePerson "Jan" "Hake",SimplePerson "Brother dear" "Hake"]
+
+```
+
+When you consider the `map` function
+
+```
+ghci>:t map
+map :: (a -> b) -> [a] -> [b]
+```
+
+from the right site, you can see that `[b]` is the return type of the `map` function.
+In this case it is an array of `Person`, so `b` is a `Person`.
+the `[a]` is a list of `SimplePerson`is which takes a last name and returns a Person.
+The signature is
+
+```
+ghci>:t SimplePerson "Jan"
+SimplePerson "Jan" :: String -> Person
+```
+
+The `map` function applies the method of the first parameter to the list of partial `SimplePerson`s and returns an array of `Person`.
+
+
+
+
 # Real world projects
 
 There are several Haskell projects, which are really remarkable. 
@@ -108,4 +141,5 @@ There are several readers and writers available.
 [pandoc]: http://pandoc.org/
 [pandocFilters]: http://pandoc.org/scripting.html
 [preludeBool]: https://hackage.haskell.org/package/base-4.9.1.0/docs/Prelude.html#t:Bool
-[typeClass]: https://www.haskell.org/tutorial/stdclasses.html
+[typeClass]: http://learnyouahaskell.com/types-and-typeclasses
+[currying]: https://en.wikipedia.org/wiki/Currying
