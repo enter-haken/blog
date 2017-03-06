@@ -28,7 +28,7 @@ The function definition header is not mandatory, if Haskell can infer the signat
 It is best practice to add a function signature, even it is not necessary.
 
 ```
-ghci>:t putStr
+ghci> :t putStr
 putStr :: String -> IO ()
 ```
 
@@ -57,15 +57,15 @@ In this example a `Person` can be created using the value constructor `SimplePer
 The first parameter will be the first name, the second the last name.
 
 ```
-ghci>:t SimplePerson 
+ghci> :t SimplePerson 
 SimplePerson :: String -> String -> Person
 ```
 
 Creating a new `Person` in ghci will cause an error, if you don't bind it to a variable.
 
 ```
-ghci>data Person = SimplePerson String String
-ghci>SimplePerson "Jan" "Hake"
+ghci> data Person = SimplePerson String String
+ghci> SimplePerson "Jan" "Hake"
 
 <interactive>:6:1:
     No instance for (Show Person) arising from a use of ‘print’
@@ -76,18 +76,34 @@ If you want to see, how a `Person` looks like, it must be able to show it self.
 Therefore a first [type class][typeClass] has to be introduced to the new `Person`.
 
 ```
-ghci>data Person = SimplePerson String String deriving Show
-ghci>SimplePerson "Jan" "Hake"
+ghci> data Person = SimplePerson String String deriving Show
+ghci> SimplePerson "Jan" "Hake"
 SimplePerson "Jan" "Hake"
 ```
 
 In Haskell, every function is a [curried][currying] function. 
 This means, every function in Haskell has exactly one parameter.
+This is called [partial application][partialApplication] and looks like
+
+```
+ghci> let add a b =  a + b
+ghci> :t add
+add :: Num a => a -> a -> a
+ghci> let addOne = add 1
+ghci> :t addOne
+addOne :: Num a => a -> a
+ghci> addOne 10
+11
+```
+Some new stuff here. 
+
+The function signature `add :: Num a => a -> a -> a` says, that the `add` function uses a *type variable* `a`, which has to be an instance of the `Num` *type class*.
+The `->` operator is right associative, so the signature can be written as `add :: Num a => a -> (a -> a)`.
 
 You can build a list of `Person`s with the following expression.
 
 ```
-ghci>map ($ "Hake") [SimplePerson "Jan", SimplePerson "Brother dear"]
+ghci> map ($ "Hake") [SimplePerson "Jan", SimplePerson "Brother dear"]
 [SimplePerson "Jan" "Hake",SimplePerson "Brother dear" "Hake"]
 
 ```
@@ -95,7 +111,7 @@ ghci>map ($ "Hake") [SimplePerson "Jan", SimplePerson "Brother dear"]
 When you consider the `map` function
 
 ```
-ghci>:t map
+ghci> :t map
 map :: (a -> b) -> [a] -> [b]
 ```
 
@@ -105,11 +121,18 @@ the `[a]` is a list of `SimplePerson`is which takes a last name and returns a Pe
 The signature is
 
 ```
-ghci>:t SimplePerson "Jan"
+ghci> :t SimplePerson "Jan"
 SimplePerson "Jan" :: String -> Person
 ```
 
-The `map` function applies the method of the first parameter to the list of partial `SimplePerson`s and returns an array of `Person`.
+The `map` function applies the method 
+
+```
+ghci> :t ($ "Hake")
+($ "Hake") :: ([Char] -> b) -> b
+```
+
+to the list of partial `SimplePerson`s and returns an array of `Person`.
 
 
 
@@ -143,3 +166,4 @@ There are several readers and writers available.
 [preludeBool]: https://hackage.haskell.org/package/base-4.9.1.0/docs/Prelude.html#t:Bool
 [typeClass]: http://learnyouahaskell.com/types-and-typeclasses
 [currying]: https://en.wikipedia.org/wiki/Currying
+[partialApplication]: https://wiki.haskell.org/Partial_application
