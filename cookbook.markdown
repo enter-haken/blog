@@ -143,6 +143,7 @@ jumps
 
 * `u` - undo
 * `<ctrl> r` - redo
+* `:w !sudo tee %` - save file, if you forgot `sudo`
 
 # haskell
 
