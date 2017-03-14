@@ -46,8 +46,8 @@ In [prelude][preludeBool] the `Bool` definition looks like.
 data Bool = True | False
 ```
 
-`True` and `False` are value constructors. 
-They can have zero or more parameters.
+`True` and `False` are *value constructors.* 
+Value constructors can have zero or more parameters.
 
 ```
 data Person = SimplePerson String String
@@ -133,9 +133,18 @@ ghci> :t ($ "Hake")
 ```
 
 to the list of partial `SimplePerson`s and returns an array of `Person`.
+<!--
+# Type classes
 
+Type classes are a kind of interface, a behaviour a *type* can have.
 
+Looking at the definition of the *+* function
 
+```
+ghci> :t (+)
+(+) :: Num a => a -> a -> a
+```
+-->
 
 # Real world projects
 
@@ -156,6 +165,14 @@ This swiss-army knife let you convert files between different markup formats.
 There are several readers and writers available.
 [Pandoc][pandoc] uses an internal AST which can be manipulated by [filters][pandocFilters].
 
+```
+Prelude> :m Text.Pandoc
+Prelude Text.Pandoc> readMarkdown def "# Test"
+Right (Pandoc (Meta {unMeta = fromList []}) [Header 1 ("test",[],[]) [Str "Test"]])
+```
+
+This litte example reads markdown with [default reader options][pandocDef]
+
 [ghci]: https://wiki.haskell.org/GHC/GHCi
 [hoogle]: https://www.haskell.org/hoogle/
 [hackage]: http://hackage.haskell.org/
@@ -167,3 +184,4 @@ There are several readers and writers available.
 [typeClass]: http://learnyouahaskell.com/types-and-typeclasses
 [currying]: https://en.wikipedia.org/wiki/Currying
 [partialApplication]: https://wiki.haskell.org/Partial_application
+[pandocDef]: http://hackage.haskell.org/package/pandoc-1.19.2.1/docs/Text-Pandoc-Options.html#v:def
