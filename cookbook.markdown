@@ -11,7 +11,6 @@ Assuming a image viewer like [feh](https://feh.finalrewind.org) is installed
 
 ```
 echo 'digraph { a -> b; b -> c; a -> c; }' | dot -Tpng | feh -
-
 ```
 
 will show 
@@ -164,3 +163,9 @@ after changed into project folder
 ## ghci
 
 * `:set -XOverloadedStrings` - activate overloaded string extension
+
+# Windows batch programming
+
+[Windows batch scripting](https://en.wikibooks.org/wiki/Windows_Batch_Scripting)
+
+* `START "" http://localhost` - starts a default browser with `http://localhost` or opens a new tab.
