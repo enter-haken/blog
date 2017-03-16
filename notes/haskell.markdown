@@ -9,7 +9,7 @@ The type system is one of the best in class.
 A frequent statement says: "If it compiles, it runs". 
 
 My current development stack uses the CLI [ghci][ghci] and vim as an editor.
-I use [Hoogle][hoogle] to search for types or type definitions, and use [Hacked][hackage] to dive into the libraries frequently used.
+I use [Hoogle][hoogle] to search for types or type definitions, and use [Hackage][hackage] to dive into the libraries frequently used.
 
 <!--more-->
 
