@@ -5,7 +5,7 @@ help:
 	@echo "make clean - delete all generated content and the build resource"
 	@echo "make serve - run the site in debug mode"
 	@echo "make publish - publish site on enter-haken.github.io"
-	@echo "make run - clean site build serve"
+	@echo "make run - site build serve"
 
 site:
 	ghc --make site.hs
@@ -33,6 +33,6 @@ publish:
 	git commit -v && \
 	git push
 
-run: clean site build serve 
+run: site build serve 
 
 
