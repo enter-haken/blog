@@ -216,7 +216,7 @@ svg contents = unsafePerformIO $ readProcess "dot" ["-Tsvg"] contents
 
 This code transforms a markdown document into html and converts all codeblocks with a `lang` tag into a svg version of the given graph. At this point, I don't use the value of `lang`. It is possible to implement a different behaviour for other tags or different values.
 
-See the [result](/example/pandoc/dotlang/index.html).
+See the [result][8] or check out the [code][9], if you like it.
                     
 [1]: https://jaspervdj.be/hakyll/
 [2]: http://pandoc.org/
@@ -225,3 +225,5 @@ See the [result](/example/pandoc/dotlang/index.html).
 [5]: https://hackage.haskell.org/package/hakyll-4.9.5.1/docs/Hakyll-Web-Pandoc.html#g:2
 [6]: https://hackage.haskell.org/package/pandoc-types-1.19/docs/Text-Pandoc-Walk.html
 [7]: http://hackage.haskell.org/package/base-4.9.1.0/docs/System-IO-Unsafe.html#v:unsafePerformIO
+[8]: /example/pandoc/dotlang/index.html
+[9]: https://github.com/enter-haken/hakyll-dot-demo
