@@ -157,7 +157,7 @@ This static site generator is used to generate this blog.
 Outgoing from its application, [hakyll][hakyll] is very io centric.
 It is a good example to show, when and where to make pure or impure functions.
 On hakylls homepage, you can find [several examples][hakyllExamples] how to build a static website.
-It take a lot advantage from the next project.
+It takes a lot advantage from the next project.
 
 ## pandoc
 
