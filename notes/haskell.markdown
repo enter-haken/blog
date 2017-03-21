@@ -95,6 +95,7 @@ addOne :: Num a => a -> a
 ghci> addOne 10
 11
 ```
+
 Some new stuff here. 
 
 The function signature `add :: Num a => a -> a -> a` says, that the `add` function uses a *type variable* `a`, which has to be an instance of the `Num` *type class*.
