@@ -169,3 +169,19 @@ after changed into project folder
 [Windows batch scripting](https://en.wikibooks.org/wiki/Windows_Batch_Scripting)
 
 * `START "" http://localhost` - starts a default browser with `http://localhost` or opens a new tab.
+
+# .NET / C#
+
+## Force to copy an unused assembly
+
+When the compiler sees no usage of a referenced assembly, it won't be copied to the output folder.
+If you need for some reason the assembly in your output folder, you can create a dummy usage, which forces the compiler to copy the assembly.
+
+```
+private static void Dummy()
+{
+    Action<Type> doesNothingWithType = _ => { };
+    var dummy = typeof(ReferencedAssembly.SomeClass);
+    doesNothingWithType(dummy);
+}
+```
