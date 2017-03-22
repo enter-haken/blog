@@ -74,3 +74,10 @@ About extending the PostgreSQL Server with PG/pgSQL, PL/Python, PL/Perl and PL/T
 ## [PostgreSQL 9.0 High Performance](http://www.amazon.com/PostgreSQL-High-Performance-Gregory-Smith/dp/184951030X)
 
 How to tune the database server.
+
+# .NET Framework
+
+## [Pro WPF in C\# 2010](https://www.amazon.de/Pro-WPF-2010-Presentation-Foundation/dp/1430272058)
+
+Get a good starting point for [WPF](https://msdn.microsoft.com/en-us/library/ms754130(v=vs.110).aspx).
+There exists a new [edition](https://www.amazon.de/Pro-WPF-4-5-Presentation-Professional/dp/1430243651) at the time of writing.
