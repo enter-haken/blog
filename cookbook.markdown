@@ -170,7 +170,7 @@ after changed into project folder
 
 * `START "" http://localhost` - starts a default browser with `http://localhost` or opens a new tab.
 
-# .NET / C#
+# .NET / C\#
 
 ## Force to copy an unused assembly
 
@@ -180,8 +180,8 @@ If you need for some reason the assembly in your output folder, you can create a
 ```
 private static void Dummy()
 {
-    Action<Type> doesNothingWithType = _ => { };
-    var dummy = typeof(ReferencedAssembly.SomeClass);
-    doesNothingWithType(dummy);
+    Action<Type> doesNothingWith = _ => { };
+    var anyType = typeof(ReferencedAssembly.SomeClass);
+    doesNothingWith(anyType);
 }
 ```
