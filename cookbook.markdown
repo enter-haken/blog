@@ -185,3 +185,25 @@ private static void Dummy()
     doesNothingWith(anyType);
 }
 ```
+# Windows
+
+Here comes the Windows related stuff
+
+## Chocolatey
+
+A package manager for Windows.
+
+### Installation
+
+Before the installation you must allow remote scripts to run.
+Start a powershell with administrator rights
+
+```
+Set-ExecutionPolicy RemoteSigned
+iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+```
+### Ack
+
+```
+choco install ack 
+```
