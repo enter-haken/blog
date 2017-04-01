@@ -207,3 +207,14 @@ iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 ```
 choco install ack 
 ```
+
+# misc
+
+## whatching amazon prime video from chromium on a gentoo system via chromecast
+
+At first the `widevine` use flag for `chromium` has to be enabled.
+It enables the closed source capability of chromium, used by Amazon Prime Video and Netflix.
+The `chrome://flags/#load-media-router-component-extension` has to be `enabled`.
+With this configuration you can go to prime videos and cast the tab while playing.
+
+In the long run a fire tv stick is a better fit, because it comes from the same house.
