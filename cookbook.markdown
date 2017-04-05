@@ -185,6 +185,33 @@ private static void Dummy()
     doesNothingWith(anyType);
 }
 ```
+
+## Development stack
+
+Sometimes it is usefull, to start a build from the command line.
+a `make_debugBuild.bat` can look like
+
+```
+call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat"
+msbuild ReportDelivery.sln /p:Configuration=Debug
+```
+
+For a `make_releaseBuild.bat` you can just change the msbuild `Configuration` parameter.
+
+```
+call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat"
+msbuild ReportDelivery.sln /p:Configuration=Release
+```
+
+To delete common generated / build folders from command line, you can use a `cleanup.bat` like
+
+```
+FOR /F "tokens=*" %%G IN ('DIR /B /AD /S obj') DO RMDIR /S /Q "%%G"
+FOR /F "tokens=*" %%G IN ('DIR /B /AD /S bin') DO RMDIR /S /Q "%%G"
+
+REM RMDIR /S /Q AdditionalFolderToDelete
+```
+
 # Windows
 
 Here comes the Windows related stuff
