@@ -188,8 +188,8 @@ private static void Dummy()
 
 ## Development stack
 
-Sometimes it is usefull, to start a build from the command line.
-a `make_debugBuild.bat` can look like
+Sometimes it is usefull, to start a build from the command line. 
+A `make_debugBuild.bat` can look like
 
 ```
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat"
