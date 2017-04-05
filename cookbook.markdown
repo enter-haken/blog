@@ -193,14 +193,14 @@ a `make_debugBuild.bat` can look like
 
 ```
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat"
-msbuild ReportDelivery.sln /p:Configuration=Debug
+msbuild SolutionName.sln /p:Configuration=Debug
 ```
 
 For a `make_releaseBuild.bat` you can just change the msbuild `Configuration` parameter.
 
 ```
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat"
-msbuild ReportDelivery.sln /p:Configuration=Release
+msbuild SolutionName.sln /p:Configuration=Release
 ```
 
 To delete common generated / build folders from command line, you can use a `cleanup.bat` like
