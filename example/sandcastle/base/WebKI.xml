@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Content property" Url="html/ba010a1a-73c3-bb8a-0e81-8ce7c752aeb3.htm" />
+  <HelpKINode Title="Document class">
+    <HelpKINode Title="Document Class" Url="html/2d65ed40-a949-8a30-45a9-e584ab57b989.htm" />
+    <HelpKINode Title="about Document class" Url="html/2d65ed40-a949-8a30-45a9-e584ab57b989.htm" />
+    <HelpKINode Title="constructor" Url="html/f6075957-fca9-32d9-ee80-1be3170930dd.htm" />
+    <HelpKINode Title="methods" Url="html/83154c21-65b9-6013-2026-16eee9b07c7d.htm" />
+    <HelpKINode Title="properties" Url="html/5cd40fd3-9c70-9d8f-2422-387f65e70fbc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Document.Content property" Url="html/ba010a1a-73c3-bb8a-0e81-8ce7c752aeb3.htm" />
+  <HelpKINode Title="Document.Document constructor" Url="html/f6075957-fca9-32d9-ee80-1be3170930dd.htm" />
+  <HelpKINode Title="Document.Print method" Url="html/8a336936-be2f-016e-b234-443faf71dc1b.htm" />
+  <HelpKINode Title="Document.Title property" Url="html/8a1d2208-a679-8d1f-33d5-7843d4f4da9a.htm" />
+  <HelpKINode Title="Document.ToString method" Url="html/e9f03f17-a161-7324-b15e-9bc7738ac2a8.htm" />
+  <HelpKINode Title="IPrintable interface">
+    <HelpKINode Title="IPrintable Interface" Url="html/157ba5a0-f822-044a-6c5b-49eeea5ef9df.htm" />
+    <HelpKINode Title="about IPrintable interface" Url="html/157ba5a0-f822-044a-6c5b-49eeea5ef9df.htm" />
+    <HelpKINode Title="methods" Url="html/3ee303da-e9df-8e0b-62bf-e3fdd4d6b8f2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPrintable.Print method" Url="html/f7c43825-9868-ce90-0a31-c84851edfb00.htm" />
+  <HelpKINode Title="Print method">
+    <HelpKINode Title="Document.Print Method " Url="html/8a336936-be2f-016e-b234-443faf71dc1b.htm" />
+    <HelpKINode Title="IPrintable.Print Method " Url="html/f7c43825-9868-ce90-0a31-c84851edfb00.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SandcastleTest.Base namespace" Url="html/d179c1b5-5e6c-b3d6-3fb6-c4e934f83935.htm" />
+  <HelpKINode Title="SandcastleTest.Base.Document class" Url="html/2d65ed40-a949-8a30-45a9-e584ab57b989.htm" />
+  <HelpKINode Title="SandcastleTest.Base.IPrintable interface" Url="html/157ba5a0-f822-044a-6c5b-49eeea5ef9df.htm" />
+  <HelpKINode Title="Title property" Url="html/8a1d2208-a679-8d1f-33d5-7843d4f4da9a.htm" />
+  <HelpKINode Title="ToString method" Url="html/e9f03f17-a161-7324-b15e-9bc7738ac2a8.htm" />
+</HelpKI>
