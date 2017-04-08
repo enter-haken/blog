@@ -181,9 +181,9 @@ namespace SandcastleTest.Base
 
 The `CompilerGenerated` attribute prevents sandcastle to generate a documentation for the class itself.
 
-Together you get this [result][sandcastleTestBaseHelp]
+For this [code][sandcastleTestBase] you get this [result][sandcastleTestBaseHelp]
 
-[sandcastleTestBase]: linkToGithub
+[sandcastleTestBase]: https://github.com/enter-haken/SandcastleDemo/tree/master/SandcastleTest
 [sandcastleTestBaseHelp]: /example/sandcastle/base/index.html
 [release]:  https://github.com/EWSoftware/SHFB/releases
 [literateProgramming]: https://en.wikipedia.org/wiki/Literate_programming
