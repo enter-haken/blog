@@ -22,6 +22,11 @@ About the craftsmanship of a coder.
 
 How founders get their successfully business.
 
+## [Code Complete](https://www.amazon.de/Code-Complete-Practical-Construction-Costruction/dp/0735619670)
+
+This book is about constructing software. 
+There are several tips included, making a developers live more pleasant.
+
 # Books by Pieter Hintjens
 
 ## [Social Architecture](https://www.amazon.de/Social-Architecture-Building-line-Communities/dp/1533112452/)
