@@ -245,3 +245,8 @@ The `chrome://flags/#load-media-router-component-extension` has to be `enabled`.
 With this configuration you can go to prime videos and cast the tab while playing.
 
 In the long run a fire tv stick is a better fit, because it comes from the same house.
+
+## setup system date
+
+    # date 041513122017
+    Sat Apr 15 13:12:00 CEST 2017
