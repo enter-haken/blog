@@ -70,6 +70,10 @@ Good starting point for the Haskell language. Also available [online](http://lea
 
 Also available [online](http://book.realworldhaskell.org/)
 
+## [Thinking Functionally with Haskell](https://www.amazon.com/Thinking-Functionally-Haskell-Richard-Bird/dp/1107452643)
+
+A more scientific introduction to Haskell.
+
 # Databases
 
 ## [PostgreSQL Server Programming](http://www.amazon.com/PostgreSQL-Server-Programming-Usama-Dar/dp/1783980583)
