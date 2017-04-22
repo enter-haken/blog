@@ -104,8 +104,8 @@ If the `cref` attribute value is misspelled, you get a compiler warning.
 
 If you apply the `IPrintable` interface to a `Document`,
 
-using System;
-using System.Text;
+    using System;
+    using System.Text;
 
     namespace SandcastleTest.Base
     {
@@ -152,7 +152,7 @@ The `<inheritdoc>` tag is used for this application.
 
 For namespace documentation a `NamespaceDoc` class has to be added to the namespace.
 
-using System.Runtime.CompilerServices;
+    using System.Runtime.CompilerServices;
 
     namespace SandcastleTest.Base
     {
@@ -168,7 +168,333 @@ using System.Runtime.CompilerServices;
 
 The `CompilerGenerated` attribute prevents sandcastle to generate a documentation for the class itself.
 
+# documenting a larger project
+
+In a more complex examples you have a deep inheritance hierarchy.
+When you are coming into a mature project / product you'll find interfaces and/or abstract classes defining base behavior or base data structures.
+The goal is, to reuse documentation as much as possible.
+
+For demonstration there is a data base class `PocoBase`, which defines a unique `Id` for all data entities used in an application.
+
+    using System;
+    
+    namespace SandcastleTest.Generic.POCO
+    {
+        /// <summary>
+        /// Base class for all POCOs
+        /// </summary>
+        public abstract class PocoBase
+        {
+            private Guid _Id = Guid.Empty;
+    
+            /// <summary>
+            /// Id for the entity
+            /// </summary>
+            /// <remarks>
+            /// If the <see cref="_Id"/> is <see cref="Guid.Empty"/> 
+            /// a new <see cref="Guid"/> is generated.
+            /// </remarks>
+            public Guid Id
+            {
+                get
+                {
+                    if (_Id == Guid.Empty)
+                        _Id = Guid.NewGuid();
+    
+                    return _Id;
+                }
+                set
+                {
+                    _Id = value;
+                }
+            }
+    
+            /// <summary>
+            /// Gets a hascode for a <see cref="PocoBase"/>
+            /// </summary>
+            /// <returns> a hascode for a <see cref="PocoBase"/></returns>
+            public override int GetHashCode()
+            {
+                return Id.GetHashCode();
+            }
+        }
+    }
+
+The documentation part will often be a bigger part of the code. 
+You can fold the documentation in Visual Studio if you like. 
+Most editors offer this feature, do get a more compact view on the code if necessary.
+
+When a data access layer uses this pocos based on `PocoBase` you can define some base methods for data access.
+
+    using SandcastleTest.Generic.POCO;
+    
+    using System;
+    using System.Collections.Generic;
+    
+    namespace SandcastleTest.Generic.DAL
+    {
+        /// <summary>
+        /// A base interface for all CRUD operations
+        /// </summary>
+        /// <typeparam name="T"><inheritdoc cref="PocoBase" select="summary"/></typeparam>
+        public interface ICreateReadUpdateDelete<T> where T : PocoBase
+        {
+            /// <summary>
+            /// Create a new <paramref name="entity"/>
+            /// </summary>
+            /// <param name="entity"><inheritdoc cref="PocoBase" select="summary"/></param>
+            void Create(T entity);
+    
+            /// <summary>
+            /// Get a list of <typeparamref name="T"/>
+            /// </summary>
+            /// <returns>a list of <typeparamref name="T"/></returns>
+            List<T> GetList();
+    
+            /// <summary>
+            /// Get an entity by <see cref="PocoBase.Id"/>
+            /// </summary>
+            /// <returns>an entity of type <typeparamref name="T"/></returns>
+            T GetEntity(Guid id);
+    
+            /// <summary>
+            /// Update an entity of <typeparamref name="T"/>
+            /// </summary>
+            /// <param name="entity"><inheritdoc cref="PocoBase" select="summary"/></param>
+            /// <returns>if the update succeeded, this method returns true, otherwise false.</returns>
+            bool Update(T entity);
+    
+            /// <summary>
+            /// Deletes an entity of  <typeparamref name="T"/>
+            /// </summary>
+            /// <param name="entity"><inheritdoc cref="PocoBase" select="summary"/></param>
+            /// <returns>if the deletion succeeded, this method returns true, otherwise false.</returns>
+            bool Delete(T entity);
+        }
+    }
+ 
+The `summary` documentation of `PocoBase` is reused with the `<inheritdoc cref="PocoBase" select="summary"/>` statement. 
+The interface contains a base documentation for the generic behavior of managing CRUD operations.
+
+The next abstraction layer is a implementation of these methods.
+The simplest example uses the file system as a storage.
+
+    using Newtonsoft.Json;
+    
+    using SandcastleTest.Generic.POCO;
+    
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    
+    namespace SandcastleTest.Generic.DAL.FileSystemStorage
+    {
+        /// <inheritdoc/>
+        /// <summary>
+        /// Handling CRUD actions for file system storage.
+        /// </summary>
+        public abstract class Crud<T> : ICreateReadUpdateDelete<T>
+            where T : PocoBase
+        {
+            /// <summary>
+            /// Gets the file name of the current entity.
+            /// The filename is constructed with the poco class name and the extension .json
+            /// </summary>
+            private string FileName => $"{typeof(T).Name }.json";
+    
+            /// <summary>
+            /// Get all contents of the file, containing all the contents of the entity.
+            /// </summary>
+            private string Content => File.ReadAllText(FileName);
+    
+            /// <summary>
+            /// Saves a raw string representation to file system.
+            /// </summary>
+            /// <param name="rawContent">a raw string representation</param>
+            private void Store(string rawContent) => File.WriteAllText(FileName, rawContent);
+    
+            /// <summary>
+            /// Stores a <see cref="List{T}"/> to  the file system
+            /// </summary>
+            /// <param name="allEntities">all entities</param>
+            private void Store(List<T> allEntities) => Store(JsonConvert.SerializeObject(allEntities));
+    
+            /// <inheritdoc/>
+            /// <exception cref="ArgumentNullException">is thrown, when <paramref name="entity"/> is null</exception>
+            public void Create(T entity)
+            {
+                if (entity == null)
+                    throw new ArgumentNullException(nameof(entity));
+    
+                var allEntities = GetList();
+                if (Exists(allEntities, entity))
+                    return; // no update on creation
+    
+                allEntities.Add(entity);
+    
+                Store(allEntities);
+            }
+    
+            /// <inheritdoc/>
+            public bool Delete(T entity)
+            {
+                var allEntities = GetList();
+                if (!(Exists(allEntities, entity)))
+                    return false ;
+    
+                var itemToRemove = allEntities.SingleOrDefault(x => x.Id == entity.Id);
+                if (itemToRemove == null)
+                    return false;
+    
+                if (allEntities.Remove(itemToRemove))
+                {
+                    Store(allEntities);
+                    return true;
+                }
+    
+                return false;
+            }
+    
+            /// <inheritdoc/>
+            public T GetEntity(Guid id) => GetList().SingleOrDefault(x => x.Id == id);
+    
+            /// <inheritdoc/>
+            public List<T> GetList()
+            {
+                try
+                {
+                    return JsonConvert.DeserializeObject<List<T>>(Content);
+                }
+                catch
+                {
+                    // maybe file does not exists...
+                    return new List<T>();
+                }
+            }
+    
+            /// <inheritdoc/>
+            public bool Update(T entity)
+            {
+                if (entity == null)
+                    throw new ArgumentNullException(nameof(entity));
+    
+                var allEntities = GetList();
+                if (Exists(allEntities, entity))
+                {
+                    allEntities.Replace(entity);
+                    Store(allEntities);
+    
+                    return true;
+                }
+                return false;
+            }
+    
+            /// <summary>
+            /// Checks, if <paramref name="allEntities" /> contains a <paramref name="entityToCheck"/>
+            /// </summary>
+            /// <param name="allEntities">all entities</param>
+            /// <param name="entityToCheck">an entity to check</param>
+            /// <returns>true, if <paramref name="allEntities" /> contains a <paramref name="entityToCheck"/></returns>
+            private bool Exists(List<T> allEntities, T entityToCheck)
+            {
+                if (allEntities == null)
+                    return false;
+    
+                return allEntities.Contains(entityToCheck, new PocoBaseEqualityComparer());
+            }
+        }
+    }
+
+The interface documentation is inherited. 
+The `Create` method can throw an exception.
+Therefore the documentation can be added. 
+
+As you can see the more concrete the code is, the documentation has to be added. 
+You must try to write the base documentation as reusable as possible. 
+
+If you like to store a `Customer` on file system, the classes can look like following.
+
+First a `Person` is needed. 
+It can be assumed, that in a bigger application this class is a base class for human like entities (e.g. Customer, Employee, Manager ...).
+
+    namespace SandcastleTest.Generic.POCO
+    {
+        /// <summary>
+        /// A base class with base properties for a person.
+        /// </summary>
+        public abstract class Person :  PocoBase
+        {
+            /// <summary>
+            /// First name of a person
+            /// </summary>
+            public string FirstName { get; set; }
+    
+            /// <summary>
+            /// Last name of a person
+            /// </summary>
+            public string LastName { get; set; }
+    
+            /// <summary>
+            /// Overrides a <see cref="ToString"/> representation of an person
+            /// </summary>
+            /// <returns>a <see cref="ToString"/> representation of an person</returns>
+            public override string ToString()
+            {
+                return $"Person: {FirstName} - {LastName}";
+            }
+        }
+    }
+
+Deriving from `PocoBase` gives every `Person` an identifier.
+
+The `Customer` it self will be smaller. 
+
+    namespace SandcastleTest.Generic.POCO
+    {
+        /// <summary>
+        /// A customer
+        /// </summary>
+        public class Customer : Person
+        {
+            /// <summary>
+            /// A customer number
+            /// </summary>
+            public string CustomerNumber { get; set; }
+    
+            /// <summary>
+            /// Overrides the <see cref="ToString"/> method
+            /// </summary>
+            /// <returns>a string representation of a customer</returns>
+            public override string ToString()
+            {
+                return $"Customer: {CustomerNumber} ({base.ToString()})";
+            }
+        }
+    }
+
+For this example the customer has a `CustomerNumber`. 
+Customer related stuff can be added here, if needed.
+
+The simplest class for doing CRUD operation on a customer for a file system is just a empty subclass of `Crud<T>`.
+
+    using SandcastleTest.Generic.POCO;
+
+    namespace SandcastleTest.Generic.DAL.FileSystemStorage
+    {
+        /// <summary>
+        /// Provides methods to access a <see cref="Customer"/>
+        /// </summary>
+        public class CustomerAccess : Crud<Customer>
+        {
+        }
+    }
+
+
+
 For this [code][sandcastleTestCode] you get this [result][sandcastleTestHelp].
+
+
 
 
 
