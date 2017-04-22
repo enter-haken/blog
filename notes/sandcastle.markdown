@@ -406,16 +406,16 @@ The simplest example uses the file system as a storage.
         }
     }
 
-The interface documentation is inherited. 
-The `Create` method can throw an exception.
-Therefore the documentation can be added. 
+This code should just work. 
+I know this is not performance friendly. 
+For a demonstration it is just enough.
 
-As you can see the more concrete the code is, the documentation has to be added. 
+As you can see in the [generated result][crudDoc], a more concrete class can inherit a part of the documentation of their base class and interface. 
 You must try to write the base documentation as reusable as possible. 
 
 If you like to store a `Customer` on file system, the classes can look like following.
 
-First a `Person` is needed. 
+First a kind of `Person` is needed. 
 It can be assumed, that in a bigger application this class is a base class for human like entities (e.g. Customer, Employee, Manager ...).
 
     namespace SandcastleTest.Generic.POCO
@@ -447,8 +447,7 @@ It can be assumed, that in a bigger application this class is a base class for h
     }
 
 Deriving from `PocoBase` gives every `Person` an identifier.
-
-The `Customer` it self will be smaller. 
+The [documentation][personDoc] for `FistName` and `LastName` can be inherited from deriving classes.
 
     namespace SandcastleTest.Generic.POCO
     {
@@ -473,10 +472,12 @@ The `Customer` it self will be smaller.
         }
     }
 
-For this example the customer has a `CustomerNumber`. 
+For this example the `Customer` has a `CustomerNumber`. 
 Customer related stuff can be added here, if needed.
+Every thing else is derived from the base class `Person`.
+The [result][customerDoc] looks promising.
 
-The simplest class for doing CRUD operation on a customer for a file system is just a empty subclass of `Crud<T>`.
+The simplest class for doing CRUD operation on a `Customer` for a file system is just a empty subclass of `Crud<T>`.
 
     using SandcastleTest.Generic.POCO;
 
@@ -490,9 +491,10 @@ The simplest class for doing CRUD operation on a customer for a file system is j
         }
     }
 
+The interesting thing here is the [generated documentation][customerAccessDoc] for the above class.
+You can see, that most method documentation is inherited from base classes and interfaces.
 
-
-For this [code][sandcastleTestCode] you get this [result][sandcastleTestHelp].
+You can explore more from the [test code][sandcastleTestCode], or you can browse through the generated [result][sandcastleTestHelp].
 
 
 
@@ -505,3 +507,7 @@ For this [code][sandcastleTestCode] you get this [result][sandcastleTestHelp].
 [doxygen]: http://www.stack.nl/~dimitri/doxygen/
 [sandcastle]: https://github.com/EWSoftware/SHFB
 [sandcastleDownload]: https://github.com/EWSoftware/SHFB/releases
+[crudDoc]: /example/sandcastle/html/e8807ce7-b71c-ccbc-c71e-15c9299f5d9b.htm
+[personDoc]: /example/sandcastle/html/cc5624ed-c08d-ab34-c42e-4b97de71fa4c.htm
+[customerDoc]: /example/sandcastle/html/7696b3d3-c681-f48b-bda3-db48fcaecb00.htm
+[customerAccessDoc]: /example/sandcastle/html/f9bf04a0-9eaa-8366-d929-d5814c9b97cd.htm
