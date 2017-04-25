@@ -117,7 +117,7 @@ map :: (a -> b) -> [a] -> [b]
 ```
 
 from the right site, you can see that `[b]` is the return type of the `map` function.
-In this case it is an array of `Person`, so `b` is a `Person`.
+In this case it is a list of `Person`, so `b` is a `Person`.
 the `[a]` is a list of `SimplePerson`is which takes a last name and returns a Person.
 The signature is
 
@@ -133,7 +133,7 @@ ghci> :t ($ "Hake")
 ($ "Hake") :: ([Char] -> b) -> b
 ```
 
-to the list of partial `SimplePerson`s and returns an array of `Person`.
+to the list of partial `SimplePerson`s and returns a list of `Person`.
 <!--
 # Type classes
 
