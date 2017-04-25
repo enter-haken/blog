@@ -27,6 +27,10 @@ How founders get their successfully business.
 This book is about constructing software. 
 There are several tips included, making a developers live more pleasant.
 
+## [Code Simplicity](https://www.amazon.com/Code-Simplicity-Fundamentals-Max-Kanat-Alexander/dp/1449313892)
+
+About good software design.
+
 # Books by Pieter Hintjens
 
 ## [Social Architecture](https://www.amazon.de/Social-Architecture-Building-line-Communities/dp/1533112452/)
