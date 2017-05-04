@@ -93,7 +93,26 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
 ```
 
+# misc
 
+This are some vim hints, which are helpfull from time to time.
+
+## pretty print xml on a windows machine
+
+If you want to pretty print a xml file on a windows machine, you need a running version of `libxml`.
+Therefore you need the following files from the [libxml project downloads][libXmlFtp].
+
+* [libXml][libXmlFtpLibXml]
+* [iConv][libXmlFtpIconv]
+* [zLib][libXmlZlib]
+
+The binary folders should be added to the system path, so `xmllint.exe` is accessable from command line.
+
+If you want to pretty print a xml in a open buffer you can execute
+
+  :% !xmllint.exe "%" --format
+
+The current open buffer is replaced with the result of `xmllint.exe`.
 
 [vimCreator]: https://en.wikipedia.org/wiki/Bram_Moolenaar
 [vim]: https://en.wikipedia.org/wiki/Vim_(text_editor)
@@ -102,3 +121,7 @@ Plugin 'bling/vim-airline'
 [ctrlp]: https://github.com/ctrlpvim/ctrlp.vim
 [delimitMate]: https://github.com/Raimondi/delimitMate
 [airline]: https://github.com/vim-airline/vim-airline
+[libXmlFtp]: http://xmlsoft.org/sources/win32/
+[libXmlFtpIconv]: http://xmlsoft.org/sources/win32/iconv-1.9.2.win32.zip
+[libXmlFtpLibXml]: http://xmlsoft.org/sources/win32/libxml2-2.7.8.win32.zip
+[libXmlZlib]: http://xmlsoft.org/sources/win32/zlib-1.2.5.win32.zip
