@@ -143,6 +143,8 @@ jumps
 * `u` - undo
 * `<ctrl> r` - redo
 * `:w !sudo tee %` - save file, if you forgot `sudo`
+* `:so $MYVIMRC` - reload the current `.vimrc`
+* `e $MYVIMRC` - edit the current `.vimrc`
 
 # haskell
 
