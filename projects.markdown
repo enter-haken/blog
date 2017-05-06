@@ -25,6 +25,8 @@ Extends the functionality of the mongo shell.
 
 ## [plotTimeStamps](https://github.com/enter-haken/plotTimeStamps)
 
+Plot time based json data.
+
 # demonstration
 
 ## [SandCastleDemo](https://github.com/enter-haken/SandcastleDemo)
