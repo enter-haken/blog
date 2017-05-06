@@ -110,7 +110,7 @@ The binary folders should be added to the system path, so `xmllint.exe` is acces
 
 If you want to pretty print a xml in a open buffer you can execute
 
-  :% !xmllint.exe "%" --format
+    :% !xmllint.exe "%" --format
 
 The current open buffer is replaced with the result of `xmllint.exe`.
 
