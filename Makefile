@@ -12,6 +12,7 @@ site:
 
 build:
 	./site build
+	./updateLicenseIfNecessary.sh
 
 rebuild:
 	./site rebuild
