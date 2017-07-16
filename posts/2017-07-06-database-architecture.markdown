@@ -317,7 +317,7 @@ With a little bit formatting you get.
 
 Every time the `update_json_view_person` function is called, the `json_view` column is updated with the current relational data.
 
-In the next part, I take a look at some other use cases and make some measurements regarding performance.
+In the next part, I take a look at some other use cases.
 
 [rdbms]: https://en.wikipedia.org/wiki/Relational_database
 [nosql]: https://en.wikipedia.org/wiki/NoSQL
