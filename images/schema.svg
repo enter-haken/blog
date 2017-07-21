@@ -128,7 +128,7 @@
 <polygon fill="black" stroke="black" points="387.621,-317.681 385.034,-307.407 380.65,-317.052 387.621,-317.681"/>
 </g>
 <!-- address_type -->
-<g id="node18" class="node"><title>address_type</title>
+<g id="node17" class="node"><title>address_type</title>
 <path fill="none" stroke="black" d="M160.25,-246C160.25,-246 11.75,-246 11.75,-246 5.75,-246 -0.25,-240 -0.25,-234 -0.25,-234 -0.25,-180 -0.25,-180 -0.25,-174 5.75,-168 11.75,-168 11.75,-168 160.25,-168 160.25,-168 166.25,-168 172.25,-174 172.25,-180 172.25,-180 172.25,-234 172.25,-234 172.25,-240 166.25,-246 160.25,-246"/>
 <text text-anchor="start" x="7.5" y="-231.8" font-family="Courier New" font-weight="bold" font-size="14.00">address_type (enum)</text>
 <text text-anchor="start" x="57" y="-217.8" font-family="Courier New" font-size="14.00">private</text>
@@ -286,7 +286,7 @@
 <polygon fill="none" stroke="black" points="887,-604.5 887,-859.5 1385,-859.5 1385,-604.5 887,-604.5"/>
 </g>
 <!-- article -->
-<g id="node17" class="node"><title>article</title>
+<g id="node16" class="node"><title>article</title>
 <polygon fill="white" stroke="none" stroke-width="2" points="1119,-564 663,-564 663,-364 1119,-364 1119,-564"/>
 <polygon fill="black" stroke="none" points="672,-537 672,-559 1110,-559 1110,-537 672,-537"/>
 <text text-anchor="start" x="862" y="-545.3" font-family="Courier New" font-weight="bold" font-size="14.00" fill="white">article</text>
@@ -460,7 +460,7 @@
 <polygon fill="black" stroke="black" points="2524.82,-564.332 2525.94,-553.797 2518.49,-561.336 2524.82,-564.332"/>
 </g>
 <!-- purchase_order_status -->
-<g id="node19" class="node"><title>purchase_order_status</title>
+<g id="node18" class="node"><title>purchase_order_status</title>
 <path fill="none" stroke="black" d="M2288.5,-524C2288.5,-524 2065.5,-524 2065.5,-524 2059.5,-524 2053.5,-518 2053.5,-512 2053.5,-512 2053.5,-416 2053.5,-416 2053.5,-410 2059.5,-404 2065.5,-404 2065.5,-404 2288.5,-404 2288.5,-404 2294.5,-404 2300.5,-410 2300.5,-416 2300.5,-416 2300.5,-512 2300.5,-512 2300.5,-518 2294.5,-524 2288.5,-524"/>
 <text text-anchor="start" x="2061" y="-509.8" font-family="Courier New" font-weight="bold" font-size="14.00">purchase_order_status (enum)</text>
 <text text-anchor="start" x="2131.5" y="-495.8" font-family="Courier New" font-size="14.00">requisition</text>
@@ -517,7 +517,7 @@
 <polygon fill="black" stroke="black" points="2393.24,-853.369 2394.04,-842.804 2386.82,-850.567 2393.24,-853.369"/>
 </g>
 <!-- invoice_status -->
-<g id="node20" class="node"><title>invoice_status</title>
+<g id="node19" class="node"><title>invoice_status</title>
 <path fill="none" stroke="black" d="M2089,-764C2089,-764 1923,-764 1923,-764 1917,-764 1911,-758 1911,-752 1911,-752 1911,-712 1911,-712 1911,-706 1917,-700 1923,-700 1923,-700 2089,-700 2089,-700 2095,-700 2101,-706 2101,-712 2101,-712 2101,-752 2101,-752 2101,-758 2095,-764 2089,-764"/>
 <text text-anchor="start" x="1919" y="-749.8" font-family="Courier New" font-weight="bold" font-size="14.00">invoice_status (enum)</text>
 <text text-anchor="start" x="1977" y="-735.8" font-family="Courier New" font-size="14.00">created</text>
@@ -529,57 +529,8 @@
 <path fill="none" stroke="black" d="M2052,-989C1965.81,-989 1982.57,-846.7 1996.68,-774.286"/>
 <polygon fill="black" stroke="black" points="2000.18,-774.63 1998.73,-764.135 1993.32,-773.244 2000.18,-774.63"/>
 </g>
-<!-- transfer -->
-<g id="node12" class="node"><title>transfer</title>
-<polygon fill="white" stroke="none" stroke-width="2" points="3258.25,-1111 2827.75,-1111 2827.75,-911 3258.25,-911 3258.25,-1111"/>
-<polygon fill="black" stroke="none" points="2837,-1084 2837,-1106 3250,-1106 3250,-1084 2837,-1084"/>
-<text text-anchor="start" x="3010" y="-1092.3" font-family="Courier New" font-weight="bold" font-size="14.00" fill="white">transfer</text>
-<text text-anchor="start" x="2857" y="-1069.8" font-family="Courier New" font-size="14.00">column</text>
-<text text-anchor="start" x="2975" y="-1069.8" font-family="Courier New" font-size="14.00">type</text>
-<text text-anchor="start" x="3060" y="-1069.8" font-family="Courier New" font-size="14.00">nullable</text>
-<text text-anchor="start" x="3170" y="-1069.8" font-family="Courier New" font-size="14.00">PK</text>
-<text text-anchor="start" x="3230" y="-1069.8" font-family="Courier New" font-size="14.00">FK</text>
-<text text-anchor="start" x="2873.5" y="-1048.8" font-family="Courier New" font-size="14.00">id</text>
-<text text-anchor="start" x="2975" y="-1048.8" font-family="Courier New" font-size="14.00">uuid</text>
-<text text-anchor="start" x="3085" y="-1048.8" font-family="Courier New" font-size="14.00">NO</text>
-<text text-anchor="start" x="3133" y="-1048.8" font-family="Courier New" font-size="14.00">PRIMARY KEY</text>
-<text text-anchor="start" x="2844.5" y="-1027.8" font-family="Courier New" font-size="14.00">id_action</text>
-<text text-anchor="start" x="2975" y="-1027.8" font-family="Courier New" font-size="14.00">uuid</text>
-<text text-anchor="start" x="3085" y="-1027.8" font-family="Courier New" font-size="14.00">NO</text>
-<text text-anchor="start" x="2857" y="-1006.8" font-family="Courier New" font-size="14.00">status</text>
-<text text-anchor="start" x="2930" y="-1006.8" font-family="Courier New" font-size="14.00">transfer_status</text>
-<text text-anchor="start" x="3085" y="-1006.8" font-family="Courier New" font-size="14.00">NO</text>
-<text text-anchor="start" x="2853" y="-985.8" font-family="Courier New" font-size="14.00">payload</text>
-<text text-anchor="start" x="2971" y="-985.8" font-family="Courier New" font-size="14.00">jsonb</text>
-<text text-anchor="start" x="3085" y="-985.8" font-family="Courier New" font-size="14.00">NO</text>
-<text text-anchor="start" x="2857" y="-964.8" font-family="Courier New" font-size="14.00">result</text>
-<text text-anchor="start" x="2971" y="-964.8" font-family="Courier New" font-size="14.00">jsonb</text>
-<text text-anchor="start" x="3081" y="-964.8" font-family="Courier New" font-size="14.00">YES</text>
-<text text-anchor="start" x="2840.5" y="-943.8" font-family="Courier New" font-size="14.00">created_at</text>
-<text text-anchor="start" x="2954.5" y="-943.8" font-family="Courier New" font-size="14.00">timestamp</text>
-<text text-anchor="start" x="3085" y="-943.8" font-family="Courier New" font-size="14.00">NO</text>
-<text text-anchor="start" x="2840.5" y="-922.8" font-family="Courier New" font-size="14.00">updated_at</text>
-<text text-anchor="start" x="2954.5" y="-922.8" font-family="Courier New" font-size="14.00">timestamp</text>
-<text text-anchor="start" x="3085" y="-922.8" font-family="Courier New" font-size="14.00">NO</text>
-<polygon fill="none" stroke="black" points="2835.5,-915 2835.5,-1107 3250.5,-1107 3250.5,-915 2835.5,-915"/>
-</g>
-<!-- transfer_status -->
-<g id="node21" class="node"><title>transfer_status</title>
-<path fill="none" stroke="black" d="M2969,-778C2969,-778 2795,-778 2795,-778 2789,-778 2783,-772 2783,-766 2783,-766 2783,-698 2783,-698 2783,-692 2789,-686 2795,-686 2795,-686 2969,-686 2969,-686 2975,-686 2981,-692 2981,-698 2981,-698 2981,-766 2981,-766 2981,-772 2975,-778 2969,-778"/>
-<text text-anchor="start" x="2791" y="-763.8" font-family="Courier New" font-weight="bold" font-size="14.00">transfer_status (enum)</text>
-<text text-anchor="start" x="2853" y="-749.8" font-family="Courier New" font-size="14.00">pending</text>
-<text text-anchor="start" x="2840.5" y="-735.8" font-family="Courier New" font-size="14.00">processing</text>
-<text text-anchor="start" x="2844.5" y="-721.8" font-family="Courier New" font-size="14.00">succeeded</text>
-<text text-anchor="start" x="2791" y="-707.8" font-family="Courier New" font-size="14.00">succeeded_with_warning</text>
-<text text-anchor="start" x="2861" y="-693.8" font-family="Courier New" font-size="14.00">error</text>
-</g>
-<!-- transfer&#45;&gt;transfer_status -->
-<g id="edge16" class="edge"><title>transfer:f3&#45;&gt;transfer_status</title>
-<path fill="none" stroke="black" d="M2836,-1010C2746.58,-1010 2808.92,-867.786 2851.45,-787.157"/>
-<polygon fill="black" stroke="black" points="2854.65,-788.592 2856.27,-778.121 2848.47,-785.298 2854.65,-788.592"/>
-</g>
 <!-- email -->
-<g id="node13" class="node"><title>email</title>
+<g id="node12" class="node"><title>email</title>
 <polygon fill="white" stroke="none" stroke-width="2" points="3483.25,-275.5 3076.75,-275.5 3076.75,-138.5 3483.25,-138.5 3483.25,-275.5"/>
 <polygon fill="black" stroke="none" points="3086,-248 3086,-270 3475,-270 3475,-248 3086,-248"/>
 <text text-anchor="start" x="3259.5" y="-256.3" font-family="Courier New" font-weight="bold" font-size="14.00" fill="white">email</text>
@@ -604,7 +555,7 @@
 <polygon fill="none" stroke="black" points="3084.5,-142.5 3084.5,-271.5 3475.5,-271.5 3475.5,-142.5 3084.5,-142.5"/>
 </g>
 <!-- person_to_email -->
-<g id="node14" class="node"><title>person_to_email</title>
+<g id="node13" class="node"><title>person_to_email</title>
 <polygon fill="white" stroke="none" stroke-width="2" points="3481,-553.5 2835,-553.5 2835,-374.5 3481,-374.5 3481,-553.5"/>
 <polygon fill="black" stroke="none" points="2844,-526 2844,-548 3472,-548 3472,-526 2844,-526"/>
 <text text-anchor="start" x="3096" y="-534.3" font-family="Courier New" font-weight="bold" font-size="14.00" fill="white">person_to_email</text>
@@ -638,17 +589,17 @@
 <polygon fill="none" stroke="black" points="2843,-378.5 2843,-549.5 3473,-549.5 3473,-378.5 2843,-378.5"/>
 </g>
 <!-- person_to_email&#45;&gt;person -->
-<g id="edge17" class="edge"><title>person_to_email&#45;&gt;person</title>
+<g id="edge16" class="edge"><title>person_to_email&#45;&gt;person</title>
 <path fill="none" stroke="black" d="M2935.92,-374.46C2899.08,-359.267 2861.37,-343.405 2826,-328 2807.23,-319.826 2787.78,-311.154 2768.36,-302.359"/>
 <polygon fill="black" stroke="black" points="2769.69,-299.119 2759.14,-298.173 2766.8,-305.494 2769.69,-299.119"/>
 </g>
 <!-- person_to_email&#45;&gt;email -->
-<g id="edge18" class="edge"><title>person_to_email&#45;&gt;email</title>
+<g id="edge17" class="edge"><title>person_to_email&#45;&gt;email</title>
 <path fill="none" stroke="black" d="M3200.5,-374.171C3214.4,-345.115 3229.72,-313.1 3243.17,-284.991"/>
 <polygon fill="black" stroke="black" points="3246.49,-286.149 3247.65,-275.618 3240.18,-283.128 3246.49,-286.149"/>
 </g>
 <!-- communication_type -->
-<g id="node22" class="node"><title>communication_type</title>
+<g id="node20" class="node"><title>communication_type</title>
 <path fill="none" stroke="black" d="M3046.25,-239C3046.25,-239 2847.75,-239 2847.75,-239 2841.75,-239 2835.75,-233 2835.75,-227 2835.75,-227 2835.75,-187 2835.75,-187 2835.75,-181 2841.75,-175 2847.75,-175 2847.75,-175 3046.25,-175 3046.25,-175 3052.25,-175 3058.25,-181 3058.25,-187 3058.25,-187 3058.25,-227 3058.25,-227 3058.25,-233 3052.25,-239 3046.25,-239"/>
 <text text-anchor="start" x="2843.5" y="-224.8" font-family="Courier New" font-weight="bold" font-size="14.00">communication_type (enum)</text>
 <text text-anchor="start" x="2930" y="-210.8" font-family="Courier New" font-size="14.00">work</text>
@@ -656,12 +607,12 @@
 <text text-anchor="start" x="2897" y="-182.8" font-family="Courier New" font-size="14.00">organization</text>
 </g>
 <!-- person_to_email&#45;&gt;communication_type -->
-<g id="edge19" class="edge"><title>person_to_email:f3&#45;&gt;communication_type</title>
+<g id="edge18" class="edge"><title>person_to_email:f3&#45;&gt;communication_type</title>
 <path fill="none" stroke="black" d="M2843,-452C2808.33,-452 2834.28,-407.28 2844,-374 2857.87,-326.481 2889.41,-279.186 2913.96,-247.307"/>
 <polygon fill="black" stroke="black" points="2916.94,-249.172 2920.35,-239.141 2911.43,-244.856 2916.94,-249.172"/>
 </g>
 <!-- phone -->
-<g id="node15" class="node"><title>phone</title>
+<g id="node14" class="node"><title>phone</title>
 <polygon fill="white" stroke="none" stroke-width="2" points="4104,-286 3532,-286 3532,-128 4104,-128 4104,-286"/>
 <polygon fill="black" stroke="none" points="3541,-259 3541,-281 4095,-281 4095,-259 3541,-259"/>
 <text text-anchor="start" x="3797" y="-267.3" font-family="Courier New" font-weight="bold" font-size="14.00" fill="white">phone</text>
@@ -689,19 +640,19 @@
 <polygon fill="none" stroke="black" points="3540,-132 3540,-282 4096,-282 4096,-132 3540,-132"/>
 </g>
 <!-- communication_network -->
-<g id="node23" class="node"><title>communication_network</title>
+<g id="node21" class="node"><title>communication_network</title>
 <path fill="none" stroke="black" d="M3742.5,-50C3742.5,-50 3519.5,-50 3519.5,-50 3513.5,-50 3507.5,-44 3507.5,-38 3507.5,-38 3507.5,-12 3507.5,-12 3507.5,-6 3513.5,-0 3519.5,-0 3519.5,-0 3742.5,-0 3742.5,-0 3748.5,-0 3754.5,-6 3754.5,-12 3754.5,-12 3754.5,-38 3754.5,-38 3754.5,-44 3748.5,-50 3742.5,-50"/>
 <text text-anchor="start" x="3515" y="-35.8" font-family="Courier New" font-weight="bold" font-size="14.00">communication_network (enum)</text>
 <text text-anchor="start" x="3597.5" y="-21.8" font-family="Courier New" font-size="14.00">landline</text>
 <text text-anchor="start" x="3564.5" y="-7.8" font-family="Courier New" font-size="14.00">cellular_network</text>
 </g>
 <!-- phone&#45;&gt;communication_network -->
-<g id="edge20" class="edge"><title>phone:f3&#45;&gt;communication_network</title>
+<g id="edge19" class="edge"><title>phone:f3&#45;&gt;communication_network</title>
 <path fill="none" stroke="black" d="M3540,-185C3481.73,-185 3553.46,-103.574 3598.97,-57.2621"/>
 <polygon fill="black" stroke="black" points="3601.47,-59.7136 3606.03,-50.1487 3596.5,-54.7843 3601.47,-59.7136"/>
 </g>
 <!-- person_to_phone -->
-<g id="node16" class="node"><title>person_to_phone</title>
+<g id="node15" class="node"><title>person_to_phone</title>
 <polygon fill="white" stroke="none" stroke-width="2" points="4136.25,-553.5 3499.75,-553.5 3499.75,-374.5 4136.25,-374.5 4136.25,-553.5"/>
 <polygon fill="black" stroke="none" points="3509,-526 3509,-548 4128,-548 4128,-526 3509,-526"/>
 <text text-anchor="start" x="3756.5" y="-534.3" font-family="Courier New" font-weight="bold" font-size="14.00" fill="white">person_to_phone</text>
@@ -735,29 +686,29 @@
 <polygon fill="none" stroke="black" points="3507.5,-378.5 3507.5,-549.5 4128.5,-549.5 4128.5,-378.5 3507.5,-378.5"/>
 </g>
 <!-- person_to_phone&#45;&gt;person -->
-<g id="edge21" class="edge"><title>person_to_phone&#45;&gt;person</title>
+<g id="edge20" class="edge"><title>person_to_phone&#45;&gt;person</title>
 <path fill="none" stroke="black" d="M3541.3,-374.45C3524.04,-370.494 3506.84,-366.955 3490,-364 3198.9,-312.937 3112.74,-399.617 2826,-328 2807.04,-323.264 2787.77,-317.125 2768.75,-310.131"/>
 <polygon fill="black" stroke="black" points="2769.73,-306.759 2759.14,-306.515 2767.27,-313.311 2769.73,-306.759"/>
 </g>
 <!-- person_to_phone&#45;&gt;phone -->
-<g id="edge22" class="edge"><title>person_to_phone&#45;&gt;phone</title>
+<g id="edge21" class="edge"><title>person_to_phone&#45;&gt;phone</title>
 <path fill="none" stroke="black" d="M3818,-374.171C3818,-349.032 3818,-321.676 3818,-296.553"/>
 <polygon fill="black" stroke="black" points="3821.5,-296.307 3818,-286.307 3814.5,-296.307 3821.5,-296.307"/>
 </g>
 <!-- person_to_phone&#45;&gt;communication_type -->
-<g id="edge23" class="edge"><title>person_to_phone:f3&#45;&gt;communication_type</title>
+<g id="edge22" class="edge"><title>person_to_phone:f3&#45;&gt;communication_type</title>
 <path fill="none" stroke="black" d="M3508,-452C3468.08,-452 3519.83,-390.532 3490,-364 3419.51,-301.301 3152.55,-367.769 3067,-328 3028.82,-310.253 2995.88,-274.93 2974.22,-247.181"/>
 <polygon fill="black" stroke="black" points="2976.99,-245.04 2968.14,-239.21 2971.42,-249.284 2976.99,-245.04"/>
 </g>
 <!-- article_status -->
-<g id="node24" class="node"><title>article_status</title>
+<g id="node22" class="node"><title>article_status</title>
 <path fill="none" stroke="black" d="M816,-232C816,-232 650,-232 650,-232 644,-232 638,-226 638,-220 638,-220 638,-194 638,-194 638,-188 644,-182 650,-182 650,-182 816,-182 816,-182 822,-182 828,-188 828,-194 828,-194 828,-220 828,-220 828,-226 822,-232 816,-232"/>
 <text text-anchor="start" x="646" y="-217.8" font-family="Courier New" font-weight="bold" font-size="14.00">article_status (enum)</text>
 <text text-anchor="start" x="708" y="-203.8" font-family="Courier New" font-size="14.00">active</text>
 <text text-anchor="start" x="699.5" y="-189.8" font-family="Courier New" font-size="14.00">inactive</text>
 </g>
 <!-- article&#45;&gt;article_status -->
-<g id="edge24" class="edge"><title>article:f5&#45;&gt;article_status</title>
+<g id="edge23" class="edge"><title>article:f5&#45;&gt;article_status</title>
 <path fill="none" stroke="black" d="M671,-421C633.985,-421 687.509,-300.917 716.478,-241.079"/>
 <polygon fill="black" stroke="black" points="719.659,-242.542 720.899,-232.02 713.368,-239.472 719.659,-242.542"/>
 </g>
