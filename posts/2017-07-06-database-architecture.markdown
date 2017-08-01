@@ -46,7 +46,7 @@ With an `address` table,
     CREATE TABLE address (
         id UUID NOT NULL PRIMARY KEY DEFAULT gen_random_uuid(),
         street VARCHAR(512), 
-        street_number VARCHAR(128),
+        house_number VARCHAR(128),
         postal_code VARCHAR(10),
         city VARCHAR(512)
     );
@@ -147,7 +147,7 @@ Prior to the NoSQL movement, you would probably create a view for a `person`.
         SELECT first_name, 
                 last_name, 
                 street, 
-                street_number, 
+                house_number, 
                 postal_code,
                 city,
                 email_address,
@@ -164,7 +164,7 @@ You get a tabular result with many redundant data here.
 The next layer will take this raw data and transform it into objects.
 
     $ psql -U postgres -c "select * from test.person_view"
-      first_name  | last_name |   street   | street_number | postal_code |   city   | address_type |  email_address   |  phone_number  
+      first_name  | last_name |   street   | house_number | postal_code |   city   | address_type |  email_address   |  phone_number  
     --------------+-----------+------------+---------------+-------------+----------+--------------+------------------+----------------
      Jan Frederik | Hake      | No Street  | 3-4           | 54321       | Dortmund | work         | jan_hake@fake.de | +4923111223344
      Jan Frederik | Hake      | Fakestreet | 123           | 12345       | Dortmund | private      | jan_hake@fake.de | +4923111223344
@@ -213,7 +213,7 @@ In this case it is just one row.
 When you want to add the address data you can use the `array_agg` [aggregate function][postgresql_aggregate_functions] to create an array from a result,
 
     SELECT array_to_json(array_agg(addresses)) FROM 
-        (SELECT a.id, street, street_number, postal_code, city, p2a.address_type FROM address a
+        (SELECT a.id, street, house_number, postal_code, city, p2a.address_type FROM address a
         JOIN person_to_address p2a ON a.id = p2a.id_address WHERE p2a.id_person = person_id) addresses 
         INTO person_addresses;
 
@@ -239,7 +239,7 @@ The complete function looks like
                 WHERE id = person_id LIMIT 1) p INTO person_raw;
         
         SELECT array_to_json(array_agg(addresses)) FROM 
-            (SELECT a.id, street, street_number, postal_code, city, p2a.address_type FROM address a
+            (SELECT a.id, street, house_number, postal_code, city, p2a.address_type FROM address a
             JOIN person_to_address p2a ON a.id = p2a.id_address WHERE p2a.id_person = person_id) addresses 
             INTO person_addresses;
         
@@ -267,7 +267,7 @@ Now the person looks more or less complete
     $ psql -U postgres -c "select json_view from test.person" | cat
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      json_view                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
     ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-     {"id": "5824be75-b444-4ac7-8d59-0763e6a6a9b3", "notes": null, "website": null, "addresses": [{"id": "41a93a1b-fd31-4f05-8a63-8921a926223c", "city": "Dortmund", "street": "Fakestreet", "postal_code": "12345", "address_type": "private", "street_number": "123"}, {"id": "4a2558c9-13b5-49a8-89b8-52022575040b", "city": "Dortmund", "street": "No Street", "postal_code": "54321", "address_type": "work", "street_number": "3-4"}], "last_name": "Hake", "birth_date": null, "first_name": "Jan Frederik", "phone_numbers": [{"id": "86941ea5-fe53-4251-bdfc-abafca40b4ab", "phone_number": "+4923111223344", "communication_type": "private", "communication_network": "landline", "is_primary_phone_number": true}, {"id": "96b8ebd3-f514-4fd7-997c-136e4a6eb270", "phone_number": "+4915199887766", "communication_type": "private", "communication_network": "cellular_network", "is_primary_phone_number": false}], "email_addresses": [{"id": "9fc2ea91-cf68-4624-a903-381d765be25c", "email_address": "jan_hake@fake.de", "communication_type": "private", "is_primary_email_address": false}]}
+     {"id": "5824be75-b444-4ac7-8d59-0763e6a6a9b3", "notes": null, "website": null, "addresses": [{"id": "41a93a1b-fd31-4f05-8a63-8921a926223c", "city": "Dortmund", "street": "Fakestreet", "postal_code": "12345", "address_type": "private", "house_number": "123"}, {"id": "4a2558c9-13b5-49a8-89b8-52022575040b", "city": "Dortmund", "street": "No Street", "postal_code": "54321", "address_type": "work", "house_number": "3-4"}], "last_name": "Hake", "birth_date": null, "first_name": "Jan Frederik", "phone_numbers": [{"id": "86941ea5-fe53-4251-bdfc-abafca40b4ab", "phone_number": "+4923111223344", "communication_type": "private", "communication_network": "landline", "is_primary_phone_number": true}, {"id": "96b8ebd3-f514-4fd7-997c-136e4a6eb270", "phone_number": "+4915199887766", "communication_type": "private", "communication_network": "cellular_network", "is_primary_phone_number": false}], "email_addresses": [{"id": "9fc2ea91-cf68-4624-a903-381d765be25c", "email_address": "jan_hake@fake.de", "communication_type": "private", "is_primary_email_address": false}]}
     (1 row)
 
 With a little bit formatting you get.
@@ -282,14 +282,14 @@ With a little bit formatting you get.
             "street": "Fakestreet",
             "postal_code": "12345",
             "address_type": "private",
-            "street_number": "123"
+            "house_number": "123"
         }, {
             "id": "4a2558c9-13b5-49a8-89b8-52022575040b",
             "city": "Dortmund",
             "street": "No Street",
             "postal_code": "54321",
             "address_type": "work",
-            "street_number": "3-4"
+            "house_number": "3-4"
         }],
         "last_name": "Hake",
         "birth_date": null,
