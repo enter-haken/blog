@@ -290,7 +290,7 @@ This is an issue, to think about.
 In Germany for example, you have to store invoices for several years.
 This means, customers won't be deleted, until there last invoice is deleted.
 There is one approach, to set a own `deleted` property for a `customer`.
-This property is very handy, so it can be included into the post dll script.
+This property is very handy, so it can be included into the post [DDL][DDL] script.
 
     CREATE FUNCTION add_metadata_to_every_table() RETURNS VOID AS $$
     DECLARE 
@@ -567,3 +567,4 @@ Maybe, the upsert function needs some rewrite in a more compact language like [P
 [customer]: /posts/2017-07-15-database-architecture-part2.html#customer
 [plpython]: https://www.postgresql.org/docs/current/static/plpython.html
 [jsonFunctions]: https://www.postgresql.org/docs/current/static/functions-json.html  
+[DDL]: https://en.wikipedia.org/wiki/Data_definition_language
