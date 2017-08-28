@@ -20,6 +20,8 @@ I start with some simple pages and let this blog grow as needed.
 
 You can contact me via <jan_hake@gmx.de>, [xing](https://www.xing.com/profile/JanFrederik_Hake), [github](https://github.com/enter-haken) or [twitter](https://www.twitter.com/enter_haken)
 
+## Disclosures pursuant to §5 TMG (German law).
+
 Since I am a German citizen, I am obligated to make disclosures pursuant to §5 TMG (German law).
 
 ## Address
@@ -33,7 +35,7 @@ Since I am a German citizen, I am obligated to make disclosures pursuant to §5 
     Phone: +49 (0) 151 25577839
     E-Mail: jan_hake@gmx.de
 
-## Responsible for the content according to § 55 Abs. 2 RStV:
+## Responsible for the content according to § 55 Abs. 2 RStV (German law):
 
     Jan Frederik Hake
     Bergstraße 39
