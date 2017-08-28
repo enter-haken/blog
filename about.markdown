@@ -20,7 +20,7 @@ I start with some simple pages and let this blog grow as needed.
 
 You can contact me via <jan_hake@gmx.de>, [xing](https://www.xing.com/profile/JanFrederik_Hake), [github](https://github.com/enter-haken) or [twitter](https://www.twitter.com/enter_haken)
 
-## Disclosures pursuant to §5 TMG (German law).
+# Disclosures pursuant to §5 TMG (German law).
 
 Since I am a German citizen, I am obligated to make disclosures pursuant to §5 TMG (German law).
 
