@@ -252,3 +252,7 @@ In the long run a fire tv stick is a better fit, because it comes from the same 
 
     # date 041513122017
     Sat Apr 15 13:12:00 CEST 2017
+
+## xclip
+
+    cat id_rsa.pub | xclip -selection clipboard
