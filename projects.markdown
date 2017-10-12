@@ -27,6 +27,10 @@ Extends the functionality of the mongo shell.
 
 Plot time based json data.
 
+## [scripts](https://github.com/enter-haken/scripts)
+
+My scripts for daily usage.
+
 # demonstration
 
 ## [SandCastleDemo](https://github.com/enter-haken/SandcastleDemo)
