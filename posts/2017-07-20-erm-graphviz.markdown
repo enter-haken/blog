@@ -976,6 +976,10 @@ The complete script glued together
 I have put the result in a [external file][result] because the graph has become to big in size.
 Not so bad, I think.
 
+Update 2017-10-12: 
+
+I added a [schema.sh][schema] script to my [script collection][scripts].
+
 
 
 [ERM]: https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model
@@ -986,3 +990,5 @@ Not so bad, I think.
 [referentialconstraints]: https://www.postgresql.org/docs/current/static/infoschema-referential-constraints.html
 [constraintcolumnusage]: https://www.postgresql.org/docs/current/static/infoschema-constraint-column-usage.html
 [result]: /images/schema.svg
+[schema]: https://github.com/enter-haken/scripts/blob/master/schema.sh
+[scripts]: https://github.com/enter-haken/scripts
