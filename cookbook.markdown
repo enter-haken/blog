@@ -68,6 +68,24 @@ git unstage file.txt
 git config --global alias.l "log --graph --oneline --all"
 ```
 
+### cat diff to default browser
+
+With [diff2html](https://diff2html.xyz/) a `git diff` output can be transformed into html.
+
+    npm install -g diff2html
+
+[bcat](https://rtomayko.github.io/bcat/) is a tool for piping data to the standard browser.
+
+    git diff branch_1..branch_2 | diff2html -i stdin -o stdout | bcat
+
+With an alias
+
+    alias bdiff="diff2html -i stdin -o stdout | bcat"
+
+the call can be simplified to.
+
+    git diff branch_1..branch_2 | bdiff
+
 # firefox addons
 
 * [VimFx](https://addons.mozilla.org/de/firefox/addon/vimfx/) - using vim commands for browsing
