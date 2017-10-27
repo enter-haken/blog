@@ -86,6 +86,10 @@ the call can be simplified to.
 
     git diff branch_1..branch_2 | bdiff
 
+If you want to see the history of a file, you can use
+    
+    git log -p filename | bdiff
+
 # firefox addons
 
 * [VimFx](https://addons.mozilla.org/de/firefox/addon/vimfx/) - using vim commands for browsing
