@@ -617,7 +617,7 @@ The frozen purchase order looks like
     }
 
 This approach looks promising. 
-In the next part, we look into updating those structures.
+In the [next part](2017-08-07-database-architecture-part3.html), we look into updating those structures.
 
 [dbArchitecturePart1]: /posts/2017-07-06-database-architecture.html
 [personUpdateFunction]: /posts/2017-07-06-database-architecture.html#json-column
