@@ -31,6 +31,16 @@ count lines of code (simple)
 find . -name '*.extension' | xargs wc -l
 ```
 
+# bash
+
+    HISTSIZE=""
+
+or
+
+    HISTSIZE="INFINITE"
+
+will let the `~/.bash_history` grow infinitely. [source](https://superuser.com/questions/479726/how-to-get-infinite-command-history-in-bash)
+
 # git
 pull all repositories located in sub directories, assuming there are only subdirectories in the current directory
 
