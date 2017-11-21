@@ -188,6 +188,23 @@ after changed into project folder
 
 * `:set -XOverloadedStrings` - activate overloaded string extension
 
+# erlang / elixir
+
+## observer
+
+`Erlang` has to be emerged with `smp` and `wxwidgets`use flag.
+For `elixir` you can start the `observer` with
+
+    $ iex
+    Erlang/OTP 20 [erts-9.1] [source] [64-bit] [smp:8:8] [async-threads:10]
+    
+    Interactive Elixir (1.5.2) - press Ctrl+C to exit (type h() ENTER for help)
+    iex(1)> :observer.start
+    :ok
+    iex(2)>
+
+![observer](/images/observer.png)
+
 # Windows batch programming
 
 [Windows batch scripting](https://en.wikibooks.org/wiki/Windows_Batch_Scripting)
