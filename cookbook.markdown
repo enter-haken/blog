@@ -133,7 +133,7 @@ Pane
 
 # vim
 
-some vim stuff
+* [vimsheed](http://vimsheet.com/) - a good comprehension of vim commands.
 
 ## movement
 
