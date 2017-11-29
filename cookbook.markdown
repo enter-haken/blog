@@ -41,6 +41,25 @@ or
 
 will let the `~/.bash_history` grow infinitely. [source](https://superuser.com/questions/479726/how-to-get-infinite-command-history-in-bash)
 
+## gentoo specific aliases
+
+    alias eqf='equery f'
+    alias equ='equery u'
+    alias eqh='equery h'
+    alias eqa='equery a'
+    alias eqb='equery b'
+    alias eql='equery l'
+    alias eqd='equery d'
+    alias eqg='equery g'
+    alias eqc='equery c'
+    alias eqk='equery k'
+    alias eqm='equery m'
+    alias eqy='equery y'
+    alias eqs='equery s'
+    alias eqw='equery w'
+    
+    alias current="sudo genlop -c"
+
 # git
 pull all repositories located in sub directories, assuming there are only subdirectories in the current directory
 
