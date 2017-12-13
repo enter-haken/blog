@@ -10,7 +10,20 @@ For the site preview install
 
     npm install -g serve
 
-This will start a local web server.
+A local webserver will be started when
+    
+    $ make clean run
+    ./site build
+    Initialising...
+      Creating store...
+      Creating provider...
+      Running rules...
+    Checking for out-of-date items
+    Compiling
+    Success
+    ./updateLicenseIfNecessary.sh
+    # npm install -g serve
+    serve _site/
 
     ┌───────────────────────────────────────────────┐
     │                                               │
