@@ -24,7 +24,8 @@ clean:
 	rm site
 
 serve:
-	./site watch
+	# npm install -g serve
+	serve _site/	
 
 publish:
 	cd ../enter-haken.github.io/ && \

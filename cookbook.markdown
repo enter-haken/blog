@@ -119,6 +119,16 @@ If you want to see the history of a file, you can use
     
     git log -p filename | bdiff
 
+### cat the content of a libreoffice or docx document to console
+
+    alias lcat="libreoffice --cat"
+
+with 
+    
+    lcat document.docx | vim -
+
+you can browse the text content in your favourite editor ;)
+
 # firefox addons
 
 * [VimFx](https://addons.mozilla.org/de/firefox/addon/vimfx/) - using vim commands for browsing
