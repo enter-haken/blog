@@ -12,7 +12,7 @@ For the site preview install
 
 A local webserver will be started when
     
-    $ make clean run
+    $ make run
     ./site build
     Initialising...
       Creating store...
