@@ -1,6 +1,6 @@
 help:
 	@echo "make site - build the generator"
-	@echo "make buld - generate the site itself"
+	@echo "make build - generate the site itself"
 	@echo "make rebuild - rebuild the site itself"
 	@echo "make clean - delete all generated content and the build resource"
 	@echo "make serve - run the site in debug mode"
