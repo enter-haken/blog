@@ -31,6 +31,12 @@ count lines of code (simple)
 find . -name '*.extension' | xargs wc -l
 ```
 
+same as above without emtpy lines and comments for erlang files
+
+```
+find . -name '*.erl' | xargs cat | sed -e '/^%/d' -e '/^\s*$/d' | wc -l
+```
+
 # bash
 
     HISTSIZE=""
