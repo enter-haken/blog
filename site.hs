@@ -29,7 +29,7 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match (fromList ["about.markdown", "cookbook.markdown", "read.markdown", "projects.markdown" ]) $ do
+    match (fromList ["about.markdown", "cookbook.markdown", "read.markdown", "projects.markdown", "license.markdown" ]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -111,9 +111,12 @@ graphViz = walk codeBlock
 codeBlock :: Block -> Block
 codeBlock cb@(CodeBlock (id, classes, namevals) contents) = 
     case lookup "lang" namevals of
-        Just f -> RawBlock (Format "html") $ svg contents
+        Just f -> RawBlock (Format "html") $ svgDiv $ svg contents 
         nothing -> cb
 codeBlock x = x
 
 svg :: String -> String
 svg contents = unsafePerformIO $ readProcess "dot" ["-Tsvg"] contents
+
+svgDiv :: String -> String
+svgDiv content = "<div class=\"overflow\">" ++ content ++ "</div>"
