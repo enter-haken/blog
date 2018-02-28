@@ -340,7 +340,10 @@ There are several possibilities choosing the 'right' backend technology.
 
 This will be covered with the next article.
 
+Fell free to browse through the [sources][sources].
+
 [cms_garden]: http://www.cms-garden.org/ 
 [dbArchitecturePart3]: /posts/2017-08-07-database-architecture-part3.html
 [notify]: https://www.postgresql.org/docs/current/static/sql-notify.html
 [nested_set]: https://en.wikipedia.org/wiki/Nested_set_model
+[sources]: https://github.com/enter-haken/rasmus
