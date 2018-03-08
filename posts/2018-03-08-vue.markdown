@@ -178,6 +178,7 @@ The resulting template looks like
     </template>
 
 If you like you can test the [result][result].
+You can also take a look at the [sources][appointmentsources].
 
 [vuecli]: https://github.com/vuejs/vue-cli
 [syntastic]: https://github.com/vim-syntastic/syntastic
@@ -195,3 +196,4 @@ If you like you can test the [result][result].
 [vuematerial]: https://vuematerial.io
 [props]: https://vuejs.org/v2/guide/components.html#Props
 [result]: /example/vue/index.html
+[appointmentsources]: https://github.com/enter-haken/appointment
