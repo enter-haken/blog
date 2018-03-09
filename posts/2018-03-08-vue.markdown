@@ -177,8 +177,7 @@ The resulting template looks like
       </div>
     </template>
 
-If you like you can test the [result][result].
-You can also take a look at the [sources][appointmentsources].
+If you like, you can take a look at the [result][result] and at the [sources][appointmentsources].
 
 [vuecli]: https://github.com/vuejs/vue-cli
 [syntastic]: https://github.com/vim-syntastic/syntastic
