@@ -54,7 +54,7 @@ This will be used during development.
 # google api
 
 To get access to the google calendar, I have to create a project in the [google developer console][developerconsole].
-I need an `api key` and an `oauth2 id` for my application.
+I need an `oauth2 id` for my application.
 The `authorized javascript sources` must be configured for the `oauth2 id`.
 The [example][example] from the [google api documentation][googleapidocumentation] works as expected.
 
