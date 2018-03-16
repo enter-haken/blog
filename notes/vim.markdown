@@ -32,7 +32,7 @@ set autoindent
 ```
 
 When this option is enabled, every time you hit `<enter>` in *edit mode*, you get the same indention as the line above.
-This is quite useful, when you're writing codeblocks, especially when you're coding in a language with indention as a semantic meaning like python.
+This is quite useful, when you're writing code blocks, especially when you're coding in a language with indention as a semantic meaning like python.
 
 # plugins
 
@@ -95,7 +95,7 @@ Plugin 'bling/vim-airline'
 
 # misc
 
-This are some vim hints, which are helpfull from time to time.
+This are some vim hints, which are helpful from time to time.
 
 ## pretty print xml on a windows machine
 
@@ -106,13 +106,37 @@ Therefore you need the following files from the [libxml project downloads][libXm
 * [iConv][libXmlFtpIconv]
 * [zLib][libXmlZlib]
 
-The binary folders should be added to the system path, so `xmllint.exe` is accessable from command line.
+The binary folders should be added to the system path, so `xmllint.exe` is accessible from command line.
 
 If you want to pretty print a xml in a open buffer you can execute
 
     :% !xmllint.exe "%" --format
 
 The current open buffer is replaced with the result of `xmllint.exe`.
+
+## ctags
+
+You can tag your sources using [ctags][ctags].
+This is a very helpful tool, when you are working on huge codebases.
+
+First of all you have to build up the tag file in the root of your application with
+
+    ctags -R .
+
+After starting vim you can use
+
+    :tag whatever
+
+to search your application and browse to the occurrences with
+
+    :ts
+
+`ctags` is very helpful in combination with `CtrlP`.
+
+    :CtrlPTag
+
+will use the generated `tags` file for navigation through the sources.
+For further reading Andrew Stewards [blog post][vimandctags] will give you more information.
 
 [vimCreator]: https://en.wikipedia.org/wiki/Bram_Moolenaar
 [vim]: https://en.wikipedia.org/wiki/Vim_(text_editor)
@@ -125,3 +149,5 @@ The current open buffer is replaced with the result of `xmllint.exe`.
 [libXmlFtpIconv]: http://xmlsoft.org/sources/win32/iconv-1.9.2.win32.zip
 [libXmlFtpLibXml]: http://xmlsoft.org/sources/win32/libxml2-2.7.8.win32.zip
 [libXmlZlib]: http://xmlsoft.org/sources/win32/zlib-1.2.5.win32.zip
+[ctags]: http://ctags.sourceforge.net/
+[vimandctags]: https://andrew.stwrt.ca/posts/vim-ctags/
