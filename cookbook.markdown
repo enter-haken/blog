@@ -340,3 +340,24 @@ In the long run a fire tv stick is a better fit, because it comes from the same 
 ## xclip
 
     cat id_rsa.pub | xclip -selection clipboard
+
+## gcalcli
+
+Working with the Google calendar on console
+
+put a `.gcalclirc` in users home directory
+
+    --client_id=<client_id>
+    --client_secret=<client-secret>
+    --locale=de_DE.utf8
+    --defaultCalendar=<calendar name>
+
+Set up some convenient aliases
+
+    alias week="gcalcli calw"
+    alias month="gcalcli calm"
+    alias todo="gcalcli agenda"
+
+Get the next three weeks
+
+    week 3
