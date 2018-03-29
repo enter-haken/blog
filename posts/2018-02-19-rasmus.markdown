@@ -126,7 +126,7 @@ This approach leads to less security issues, because more database related funct
 
 # The database
 
-Every application's heard is it's database.
+Every application's heart is it's database.
 `rasmus` is no exception.
 An `rasmus` application has it's own schema within the database.
 The schemes look as following.
