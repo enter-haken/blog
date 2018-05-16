@@ -5,6 +5,12 @@ title: projects
 This is a loose collection of my projects.
 Some of them have a demo character, others I use on a daily basis.
 
+# applications
+
+## [rasmus](https://github.com/enter-haken/rasmus)
+
+An alternative content management system approach
+
 # tools and scripts
 
 ## [mquery](https://github.com/enter-haken/mquery)
@@ -31,6 +37,10 @@ Plot time based json data.
 
 My scripts for daily usage.
 
+## [schema](https://github.com/enter-haken/schema)
+
+Generate an image from a PostgreSQL database schema.
+
 # demonstration
 
 ## [SandCastleDemo](https://github.com/enter-haken/SandcastleDemo)
@@ -44,6 +54,10 @@ Converting a markdown code block into a graph visualization.
 ## [react blog example](https://github.com/enter-haken/reactBlogExample)
 
 Get in touch with react. 
+
+## [google calendar appointment](https://github.com/enter-haken/appointment)
+
+Get in touch with vue and the google api. ([post](posts/2018-03-08-vue.html))
 
 # misc 
 
