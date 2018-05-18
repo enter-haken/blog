@@ -32,7 +32,7 @@ Since I am a German citizen, I am obligated to make disclosures pursuant to §5 
 
 ## Contact
 
-    Phone: +49 (0) 151 25577839
+    Phone: +49 (0) 151 74308676 
     E-Mail: jan_hake@gmx.de
 
 ## Responsible for the content according to § 55 Abs. 2 RStV (German law):
