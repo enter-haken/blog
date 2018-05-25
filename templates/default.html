@@ -9,10 +9,17 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109218061-1"></script>
         <script>
+          var gaProperty = 'UA-109218061-1';
+          var disableString = 'ga-disable-' + gaProperty;
+       
+          if (document.cookie.indexOf(disableString + '=true') > -1) {
+              window[disableString] = true;
+          }
+ 
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'UA-109218061-1', { 'anonymize_ip' : true });
+          gtag('config', gaProperty, { 'anonymize_ip' : true });
         </script>
     </head>
     <body>
