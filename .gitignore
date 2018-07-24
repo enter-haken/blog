@@ -5,3 +5,6 @@ site
 site.hi
 site.o
 temporary
+
+./supporting/2018-07-23-rasmus-part2/frontend/build
+./supporting/2018-07-23-rasmus-part2/frontend/node_modules
