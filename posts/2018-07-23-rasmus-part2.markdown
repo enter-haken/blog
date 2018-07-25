@@ -156,7 +156,8 @@ Coming back to the bookmark context problem, I have described some parts of `ras
 ![][rasmusExample]
 
 This is just a first throw.
-If you like the idea, you can test  a static [alpha version][alpha] of the frontend, to make yourself a picture.
+If you like the idea, you can test a static [alpha version][alpha] of the frontend, to make yourself a picture.
+You can also checkout the [sources][sources], if you like.
 
 
 [rasmusPart1]: /posts/2018-02-19-rasmus.html
