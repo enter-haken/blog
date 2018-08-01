@@ -413,7 +413,7 @@ The `link` is stored into the database.
     );
 
 The `json_view` column is populated, when it is needed for the first time.
-All necessary function can be found in the [database script][link].
+All necessary functions can be found in the [database script][link].
 
 Log entries:
 
