@@ -25,7 +25,7 @@ clean:
 
 serve:
 	# npm install -g serve
-	serve _site/	
+	serve -n _site/ 
 
 publish:
 	cd ../enter-haken.github.io/ && \
