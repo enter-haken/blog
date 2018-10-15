@@ -341,6 +341,12 @@ In the long run a fire tv stick is a better fit, because it comes from the same 
 
     cat id_rsa.pub | xclip -selection clipboard
 
+## brightness
+
+    $ sudo echo 800 > /sys/class/backlight/intel_backlight/brightness
+
+sets the current brightness to `800`. (1500 is default)
+
 ## gcalcli
 
 Working with the Google calendar on console
