@@ -1,32 +1,47 @@
-help:
-	@echo "make site - build the generator"
-	@echo "make build - generate the site itself"
-	@echo "make rebuild - rebuild the site itself"
-	@echo "make clean - delete all generated content and the build resource"
-	@echo "make serve - run the site in debug mode"
-	@echo "make publish - publish site on enter-haken.github.io"
-	@echo "make run - site build serve"
+.PHONY: default
+default: help
 
-site:
+.PHONY: help
+help:
+	@echo "make build - build the site generator"
+	@echo "make generate - build the site generator if necessary and generate the site content"
+	@echo "make clean - delete all generated site content"
+	@echo "make clean_generator - delete the site generator" 
+	@echo "make deep_clean - delete all generated content and the site generator" 
+	@echo "make run - build all necessary resources and run the site in debug mode"
+	@echo "make publish - publish site on enter-haken.github.io"
+
+.PHONY: build
+build:
 	ghc --make site.hs
 
-build:
+.PHONY: generate
+generate:
+	if [ ! -f ./site ]; then make build; fi;
 	./site build
 	./updateLicenseIfNecessary.sh
 
-rebuild:
-	./site rebuild
-
 clean:
+	if [ ! -f ./site ]; then make build; fi;
 	./site clean
+
+.PHONY: clean_generator
+clean_generator:
 	rm site.hi
 	rm site.o
 	rm site
 
-serve:
+.PHONY: deep_clean
+deep_clean: clean clean_generator
+
+.PHONY: run
+run:
+	if [ ! -f ./site ]; then make build; fi;
+	if [ ! -d ./_site ]; then make generate; fi;
 	# npm install -g serve
 	serve -n _site/ 
 
+.PHONY: publish
 publish:
 	cd ../enter-haken.github.io/ && \
 	git reset --hard && \
@@ -35,6 +50,5 @@ publish:
 	git commit -v && \
 	git push
 
-run: site build serve 
 
 
