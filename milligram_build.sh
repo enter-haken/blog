@@ -4,7 +4,7 @@ NODE_PACKAGEMANAGER="yarn";
 
 set -e;
 
-if [ ! -d ./milligram/ ]; then 
+if [  -z "$(ls -A ./milligram)" ]; then 
   # a hook causes an error, which can be ignored
   git submodule update --init --recursive || true;
 fi
