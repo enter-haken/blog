@@ -1,5 +1,7 @@
+NODE_PACKAGEMANAGER="yarn";
+
 .PHONY: default
-default: help
+default: generate 
 
 .PHONY: help
 help:
@@ -17,13 +19,16 @@ build:
 
 .PHONY: generate
 generate:
+	./updateLicenseIfNecessary.sh
+	./milligram_build.sh
+	cp milligram/dist/milligram.min.css css
 	if [ ! -f ./site ]; then make build; fi;
 	./site build
-	./updateLicenseIfNecessary.sh
 
 clean:
 	if [ ! -f ./site ]; then make build; fi;
 	./site clean
+	./milligram_clean.sh
 
 .PHONY: clean_generator
 clean_generator:

@@ -6,5 +6,8 @@ site.hi
 site.o
 temporary
 
+# take a look and remove if possible
 ./supporting/2018-07-23-rasmus-part2/frontend/build
 ./supporting/2018-07-23-rasmus-part2/frontend/node_modules
+
+css/milligram.min.css

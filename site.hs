@@ -25,9 +25,14 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "css/*" $ do
-        route   idRoute
-        compile compressCssCompiler
+    match "css/default.scss" $ do
+        route $ setExtension "css" 
+        compile sass 
+
+    match "css/milligram.min.css" $ do
+        route idRoute 
+        compile compressCssCompiler 
+
 
     match (fromList ["about.markdown", "cookbook.markdown", "read.markdown", "projects.markdown", "license.markdown" ]) $ do
         route   $ setExtension "html"
@@ -120,3 +125,10 @@ svg contents = unsafePerformIO $ readProcess "dot" ["-Tsvg"] contents
 
 svgDiv :: String -> String
 svgDiv content = "<div class=\"overflow\">" ++ content ++ "</div>"
+
+sass :: Compiler (Item String)
+sass =
+    getResourceString >>=
+        withItemBody (unixFilter "sass" ["--stdin"])
+
+

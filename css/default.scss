@@ -1,0 +1,102 @@
+div .overflow {
+    overflow: auto;
+}
+
+a {
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+p:empty {
+  margin-bottom: 0;
+}
+
+// orverride default margin
+li {
+  margin-bottom: 0;
+}
+
+// post list
+#list ul {
+    padding : 0;
+    list-style-type : none;
+}
+
+#list li {
+  margin-bottom: 2rem;
+  list-style-type : none;
+}
+
+// the last paragraph is empty
+// the second last paragraph is the real one
+#list li p:nth-last-of-type(2) {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+#navigation {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#navigation a {
+  margin: 1rem;
+  border-bottom-width: medium;
+  padding-bottom: 0.3rem;
+}
+
+#footer {
+ font-size: 1.2rem;
+}
+
+// Larger than mobile screen
+@media (min-width: 40.0rem) { 
+  html {
+    font-size: 72% 
+  }
+
+  body {
+   width: 90%;
+   margin: 0 auto;
+ }
+   
+}
+
+// Larger than tablet screen
+@media (min-width: 80.0rem) { 
+  html {
+    font-size: 82% ;
+  }
+
+  body {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+// Larger than desktop screen 
+@media (min-width: 120.0rem) { 
+  html {
+    font-size: 92%; 
+  }
+
+  body {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
