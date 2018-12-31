@@ -18,6 +18,8 @@ or
 
 will install the necessary components for the preview and the sass compilation.
 
+For some graphics a [graphviz][graphviz] package is needed to execute `dot` files.
+
 
 ```
 ./updateLicenseIfNecessary.sh
@@ -69,3 +71,5 @@ Contact
 -------
 
 Jan Frederik Hake, <jan_hake@gmx.de>. [@enter_haken](https://twitter.com/enter_haken) on Twitter.
+
+[graphviz]: https://www.graphviz.org/
