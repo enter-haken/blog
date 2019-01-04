@@ -152,22 +152,7 @@ It helps you to get information about a Gentoo package.
      (u)ses                  display USE flags for PKG
      (w)hich                 print full path to ebuild for PKG
 
-Because you use this tool so often, it is practical to create some aliases in your `.bashrc` 
-
-    alias eqf='equery f'
-    alias equ='equery u'
-    alias eqh='equery h'
-    alias eqa='equery a'
-    alias eqb='equery b'
-    alias eql='equery l'
-    alias eqd='equery d'
-    alias eqg='equery g'
-    alias eqc='equery c'
-    alias eqk='equery k'
-    alias eqm='equery m'
-    alias eqy='equery y'
-    alias eqs='equery s'
-    alias eqw='equery w'
+Because you use this tool so often, it is practical to create some [aliases][cookbook_aliases] in your `.bashrc` 
 
 ## version control 
 
@@ -217,14 +202,13 @@ It sets the system time, when it is necessary.
     app-text/tree
     sys-apps/the_silver_searcher
   
-## language specific package managers 
+## non Gentoo packages 
 
     dev-python/pip
     net-libs/nodejs
     dev-haskell/cabal
 
-There are some applications, which can be installed via other package managers.
-
+There are some applications, which can be installed via other package managers
 They can be installed via
 
     $ pip install pgcli --user
@@ -239,6 +223,8 @@ or
 
 ## x11
 
+    x11-base/xorg-server
+  
     app-admin/conky
     app-text/evince
     app-text/texlive
@@ -246,7 +232,6 @@ or
     media-gfx/graphviz
     media-gfx/feh
     x11-apps/xsetroot
-    x11-base/xorg-server
     x11-misc/dmenu
     x11-misc/xscreensaver
     x11-terms/xterm
@@ -295,3 +280,4 @@ to get inline results.
 [eix]: https://wiki.gentoo.org/wiki/Eix
 [vim]: /notes/vim
 [wpa_supplicant]: https://wiki.gentoo.org/wiki/Wpa_supplicant
+[cookbook_aliases]: /cookbook#gentoo-specific-aliases
