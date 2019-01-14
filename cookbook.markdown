@@ -34,8 +34,22 @@ find . -name '*.extension' | xargs wc -l
 same as above without emtpy lines and comments for erlang files
 
 ```
-find . -name '*.erl' | xargs cat | sed -e '/^%/d' -e '/^\s*$/d' | wc -l
+$ find . -name '*.erl' | \ 
+> xargs cat | \
+> sed -e '/^%/d' -e '/^\s*$/d' | \
+> wc -l
 ```
+
+for `elixir` projects
+
+```
+$ find . -type f \( -iname \*.ex -o -iname \*.eex -o -iname \*.exs  \) | \
+> grep -v deps | \
+> xargs cat | \
+> sed -e  '/^\s*$/d' | \
+> wc -l
+```
+
 
 # bash
 
