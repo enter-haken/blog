@@ -25,6 +25,8 @@ remove empty lines from output
 sed '/^\s*$/d'
 ```
 
+# loc 
+
 count lines of code (simple)
 
 ```
