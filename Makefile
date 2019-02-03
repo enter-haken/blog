@@ -20,15 +20,14 @@ build:
 .PHONY: generate
 generate:
 	./updateLicenseIfNecessary.sh
-	./milligram_build.sh
-	cp milligram/dist/milligram.min.css css
+	if [ ! -d ./node_modules/ ]; then yarn install; fi;
+	if [ ! -f ./css/milligram.min.css ]; then cp ./node_modules/milligram/dist/milligram.min.css ./css; fi;
 	if [ ! -f ./site ]; then make build; fi;
 	./site build
 
 clean:
 	if [ ! -f ./site ]; then make build; fi;
 	./site clean
-	./milligram_clean.sh
 
 .PHONY: clean_generator
 clean_generator:
@@ -36,8 +35,13 @@ clean_generator:
 	rm site.o
 	rm site
 
+.PHONY: clean_node_modules
+clean_node_modules:
+	rm ./node_modules -rf || true
+	rm ./css/milligram.min.css || true
+
 .PHONY: deep_clean
-deep_clean: clean clean_generator
+deep_clean: clean clean_generator clean_node_modules
 
 .PHONY: run
 run:

@@ -11,3 +11,4 @@ temporary
 ./supporting/2018-07-23-rasmus-part2/frontend/node_modules
 
 css/milligram.min.css
+node_modules
