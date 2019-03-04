@@ -383,3 +383,20 @@ Set up some convenient aliases
 Get the next three weeks
 
     week 3
+    
+## typescript
+
+Automatic compile typescript application.
+
+First create a make target like
+
+    .PHONY: tsc
+    tsc:     
+        rm *build_artefacts* || true
+        tsc --build tscconfig.json
+    
+Then create an `alias` like 
+
+    alias notify='while true; do inotifywait -re modify *root_of_ts_sources' && make tsc; done'
+
+which deletes the build artefacts if needed, and recompile the application.
