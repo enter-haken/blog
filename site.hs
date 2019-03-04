@@ -21,7 +21,7 @@ myFeedConfiguration = FeedConfiguration
 
 main :: IO ()
 main = hakyll $ do
-    match ("images/*" .||. "example/**") $ do
+    match ("images/*" .||. "example/**" .||. "js/*") $ do
         route   idRoute
         compile copyFileCompiler
 
@@ -32,7 +32,6 @@ main = hakyll $ do
     match "css/milligram.min.css" $ do
         route idRoute 
         compile compressCssCompiler 
-
 
     match (fromList ["about.markdown", "cookbook.markdown", "read.markdown", "projects.markdown", "license.markdown" ]) $ do
         route   $ setExtension "html"

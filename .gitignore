@@ -11,4 +11,6 @@ temporary
 ./supporting/2018-07-23-rasmus-part2/frontend/node_modules
 
 css/milligram.min.css
+css/vis.min.css
+js/vis.min.js
 node_modules

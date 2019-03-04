@@ -22,6 +22,8 @@ generate:
 	./updateLicenseIfNecessary.sh
 	if [ ! -d ./node_modules/ ]; then yarn install; fi;
 	if [ ! -f ./css/milligram.min.css ]; then cp ./node_modules/milligram/dist/milligram.min.css ./css; fi;
+	if [ ! -f ./css/vis.min.css ]; then cp ./node_modules/vis/dist/vis.min.css ./css; fi;
+	if [ ! -f ./js/vis.min.js ]; then mkdir -p ./js && cp ./node_modules/vis/dist/vis.min.js ./js; fi;
 	if [ ! -f ./site ]; then make build; fi;
 	./site build
 

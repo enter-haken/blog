@@ -88,7 +88,7 @@ With `app-admin/eselect` you can
 
 choose a suitable profile.
 
-For a minimal desktop system the profile `13` is suitable.
+For a minimal desktop system the profile `16` is suitable.
 
 A system update after a profile change
 
@@ -100,16 +100,15 @@ can take several hours of compile time.
 
 After having a reboot consistent system, more packages can be installed
 
-
 ## portage tools
-
-    app-portage/eix
-    app-portage/genlop
-    app-portage/gentoolkit
 
 First of all, some portage tools should be installed.
 
+### app-portage/eix
+
 `app-portage/eix` has some [features][eix], including searching the portage tree.
+
+### app-portage/genlop
 
 If you want to estimate a package upgrade time, `app-portage/genlop` is your friend.
 A call to
@@ -117,7 +116,10 @@ A call to
     $ genlop -c
 
 shows the current emerge time and the estimated time. 
+
 Since the logs are parsed to retrieve the estimated time, the estimation only works for packages that have already been emerged.
+
+### app-portage/gentoolkit
 
 The `app-portage/gentoolkit` package has some portage tools, you need to work with a Gentoo system.
 
@@ -156,15 +158,17 @@ Because you use this tool so often, it is practical to create some [aliases][coo
 
 ## version control 
 
-    dev-vcs/git
-    dev-vcs/tig
+### dev-vcs/git
 
 Working with version control is a mandatory tasks for a software developer.
 `git` is the most widely used version control software.
+
+### dev-vcs/tig
+    
 Although you can easily use `git` from command line, `tig` has a ncurses-based text-mode interface.
 It's handy, to get a quick overview of a repository.
 
-## vim
+### vim
 
     app-editors/vim
   
@@ -174,31 +178,37 @@ You can see more about `vim` in my [notes][vim].
     
 ## system
 
-    app-admin/sudo
-    net-misc/dhcpcd
-    net-wireless/wpa_supplicant
-    net-misc/ntp
-    sys-process/htop
+### app-admin/sudod
 
 There are some system specific packages, which slightly depends on your setup.
 `sudo` let you execute commands as an other user. 
-This is often used in conjunction with root actions.
+This is often used in conjunction with rootn actions.
+
+### net-misc/dhcpcd
 
 `net-misc/dhcpcd` is a dhcp daemon, which should be started during boot, so that the network is up and running.
 
-When you use a wireless network, `net-wireless/wpa_supplicant` can help you configure a wireless network.
+### net-wireless/wpa_supplicant
+
+When you use a wireless network, `net-wireiless/wpa_supplicant` can help you configure a wireless network.
 The console version of the config tool is slightly more complicated than the X11 version.
 See the [documentation][wpa_supplicant] for further information.
+
+### net-misc/ntp
 
 The `net-misc/ntp` daemon is not quiet necessary, but convenient.
 It sets the system time, when it is necessary.
 
-`sys-process/htop` is a process monitor, where you can also kill processes if necessary.
+### sys-process/htop
 
+`sys-process/htop` is a process monitor, where you can also kill processes if necessary.
 
 ## terminal / bash
 
-    app-misc/ranger
+### app-misc/ranger
+
+When you need a file manager with VI key bindings, `app-misc/ranger` is your friend. 
+
     app-text/tree
     sys-apps/the_silver_searcher
   
