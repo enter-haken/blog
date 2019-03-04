@@ -393,7 +393,7 @@ First create a make target like
     .PHONY: tsc
     tsc:     
         rm *build_artefacts* || true
-        tsc --build tscconfig.json
+        tsc --build tsconfig.json
     
 Then create an `alias` like 
 
