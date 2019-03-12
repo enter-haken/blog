@@ -82,6 +82,18 @@ will let the `~/.bash_history` grow infinitely. [source](https://superuser.com/q
     
     alias current="sudo genlop -c"
 
+## silver searcher
+
+When you use the [silver searcher] code search, you can add a `.ignore` file to the root folder of your application.
+This file is similar to `.gitignore` files. 
+Due to the double asterix is [not working yet][agissue], a quick find can help you to find the files, which should be excluded.
+e.g.
+
+    $ find priv/static/libs/ -type f \( -name "*.js" -o -name "*.css" -o -name "*.map" \)
+
+will find all files with the extension `*.js`, `*.css`, or `*.map`.
+This is helpfull, when you want to exclude build artefacts.
+
 # git
 pull all repositories located in sub directories, assuming there are only subdirectories in the current directory
 
@@ -400,3 +412,5 @@ Then create an `alias` like
     alias notify='while true; do inotifywait -re modify *root_of_ts_sources' && make tsc; done'
 
 which deletes the build artefacts if needed, and recompile the application.
+
+[agissue]: https://github.com/ggreer/the_silver_searcher/issues/530
