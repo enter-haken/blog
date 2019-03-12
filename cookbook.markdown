@@ -84,7 +84,7 @@ will let the `~/.bash_history` grow infinitely. [source](https://superuser.com/q
 
 ## silver searcher
 
-When you use the [silver searcher] code search, you can add a `.ignore` file to the root folder of your application.
+When you use the [silver searcher][ag] code search, you can add a `.ignore` file to the root folder of your application.
 This file is similar to `.gitignore` files. 
 Due to the double asterix is [not working yet][agissue], a quick find can help you to find the files, which should be excluded.
 e.g.
@@ -414,3 +414,4 @@ Then create an `alias` like
 which deletes the build artefacts if needed, and recompile the application.
 
 [agissue]: https://github.com/ggreer/the_silver_searcher/issues/530
+[ag]: https://github.com/ggreer/the_silver_searcher
